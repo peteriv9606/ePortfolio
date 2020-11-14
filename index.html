@@ -10,6 +10,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
 
+        <script>
+            function loadPage(page) {
+                window.location.href = page;
+            }
+            </script>
+
        </head>
     <body>
         <section class="s1">
@@ -35,17 +41,34 @@
                         </div>
                     </div>
                     <div class="navigation">
-                        <a class="menubtn home" href="#">Home</a>
-                        <a class="menubtn" href="#">About me</a>
-                        <a class="menubtn" href="#">Achievements</a>
-                        <a class="menubtn" href="#">Services</a>
-                        <a class="menubtn" href="#">Contact</a>
-                        <hr style="margin: 5px 0px 0px 0px;">
+                        <button class="menubtn home" type="button" onclick="loadPage('index.html')">Home</button>
+                        <button class="menubtn" type="button" onclick="loadPage('assessment.html')" style="border: 1px solid lightgray;">(LDE) Assessment</button>
+                        <div class="dropdown">
+                        <button class="menubtn" style="border: 1px solid lightgray;">
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                            <div class="dropdown-content">
+                                <a href="assessment.html?w1">(Week 1) - Your digital Life</a>
+                                <a href="assessment.html?w2">(Week 2) - Getting up and running (your digital environment)</a>
+                                <a href="assessment.html?w3">(Week 3) - Making your mark online</a>
+                                <a href="assessment.html?w4">(Week 4) - Staying safe online</a>
+                                <a href="assessment.html?w5">(Week 5) - Critical Consumption</a>
+                                <a href="assessment.html?w6">(Week 6) - The right tool for the right job</a>
+                                <a href="assessment.html?w7">(Week 7) - Being Digital and making it work for you</a>
+                                <a href="assessment.html?w8">(Week 8) - Continuing your digital journey</a>
+                            </div>
+                        </div>
+                        <button class="menubtn" href="#">About me</button>
+                        <button class="menubtn" href="#">Achievements</button>
+                        <button class="menubtn" href="#">Services</button>
+                        <button class="menubtn" href="#">Contact</button>
+                        
                     </div>
+                    <hr style="margin: 0px 0px 5px;">
                     <div class="current-page">
-                        <p class="fas fa-home">
-                            <p class="txt" style="font-family: Segoe UI;">> Home</p>
-                        </p>
+                        <div class="fas fa-home" >
+                            <a class="txt" href="index.html" style="font-family: Segoe UI;">> Home</a>
+                        </div>
                     </div>
 
                     <div class="window-content">
@@ -116,9 +139,6 @@
                                     Teamwork skills.. <a href="#about.html">Read more..</a> 
                                 </td>
                             </table>
-
-
-
                         </div> 
                     </div>
                 </div>

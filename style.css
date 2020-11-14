@@ -28,19 +28,28 @@ h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;
 }
 
-p, li, span, label, input, textarea {
+a, p, li, span, label, input, textarea {
     color: var(--secondaryText);
     font-family: 'Segoe UI';
+    text-decoration: none;
 }
 
-a { text-decoration: none;
-color: #17a2b8;
-}
 
 ul {
     list-style: none;
+    padding: 10px;
+    margin: 0px;
 }
 
+li {
+    margin: 5px 0px;
+    padding: 1px;
+}
+
+li > button{
+    width: -webkit-fill-available;
+    padding: 10px 5px;
+}
 
 h1 { font-size: 56px;}
 h2 { font-size: 36px;}
@@ -75,9 +84,11 @@ h6 { font-size: 16px;}
     -moz-box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.14);
     box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.14);
     margin: 100px 0px;
+    min-width: 590px;
     height: fit-content;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    
 }
 
 .header-wrapper{
@@ -129,45 +140,97 @@ h6 { font-size: 16px;}
 }
 
 .navigation{
-    padding: 10px 1px;
+    padding: 10px 1px 0px;
     font-family: var(--windowsfont);
+    display: flex;
 }
 
 .current-page{
     font-size: 18px;
     display:flex;
-    height: 30px;
+    height: fit-content;
     margin: 0% 10%;
     border: 1px solid var(--borderColor);
 }
 
-.current-page > p{
+.current-page > div { 
+    margin-left: 10px;
+}
+
+.current-page > div > a{
+    display: inline-flex;
     margin: 5px;
     align-self: center;
     color: black;
-    cursor: default;
+    cursor: pointer;
+    padding: 5px;
 }
 
-.menubtn{
+.current-page a{
     color: black;
-    transition: 0.2s;
-    padding: 5px 10px;
+    margin: 0px;
+}
+
+.current-page a:hover{
+    background-color: var(--mainColor);
+}
+
+
+
+.menubtn {
+    background-color: white;
+    color: black;
     font-size: 18px;
-}
+    margin: 0px 1px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    font-family: var(--windowsfont);
+  }
 
-.menubtn:hover{
-    background-color: #FAFAFA;
-    transition: 0.2s;
-}
-
-.menubtn.home{
+  .menubtn.home {
     background-color: #135db1;
     color: var(--windowColor);
-}
-
-.menubtn.home:hover{
+  }
+  
+  .menubtn.home:hover {
     background-color: #2a6db8;
-}
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px 0px -3px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 470px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #FAFAFA;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    
+  }
+  
+  .menubtn:hover, .dropdown:hover .menubtn {
+    background-color: #FAFAFA;
+    
+  }
+
+
 
 .window-subcontent{
     display:flex;
@@ -239,9 +302,109 @@ tr > td {
 }
 
 
+
+
+.instructions{
+    display: flex;
+    height: 100%;
+    background-color: var(--windowColor);
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.week{
+    display :none;
+}
+
+.week .weekhead, .week .weeksubhead{
+    display: block;
+    font-size: 48px;
+    text-align: center;
+    font-family: var(--windowsfont);
+    margin: 0px;
+}
+
+.week .weeksubhead{
+    font-size: 40px;
+    font-style: italic;
+}
+
+.week hr{
+    display: block;
+    margin: 5px auto;
+    width: 50%;
+    height: 5px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.week.one{
+}
+
+.week.two{
+    
+}
+
+.week.three{
+}
+
+.week.four{
+}
+
+.week.five{
+}
+
+.week.six{
+}
+
+.week.seven{
+}
+
+.week.eight{
+}
+
+
+
 @media screen and (max-width: 1200px){
     .main-container{
         width: 95%;
         transition: 0.2s;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .window-content {
+        display: block;
+        min-height: 500px;
+        margin: 10px;
+        width: auto;
+    }
+    .left-side {
+        display: block;
+        width: 100%;
+    }
+    .right-side{
+        display: block;
+        width: 100%
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        justify-content: center;
+    }
+    .navigation {
+        padding: 10px 1px 0px;
+        font-family: var(--windowsfont);
+        display: flow-root;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin: 0px 0px 0px -8px;
     }
 }
