@@ -83,9 +83,8 @@ h6 { font-size: 16px;}
     -webkit-box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.14);
     -moz-box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.14);
     box-shadow: 20px 20px 20px 15px rgba(0,0,0,0.14);
-    margin: 100px 0px;
-    min-width: 590px;
-    height: fit-content;
+    margin: 10% 5%;
+    transition: 0.2s;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     
@@ -369,7 +368,8 @@ tr > td {
 
 @media screen and (max-width: 1200px){
     .main-container{
-        width: 95%;
+        width: auto;
+        margin: 10% 5%;
         transition: 0.2s;
     }
 }
@@ -377,7 +377,6 @@ tr > td {
 @media screen and (max-width: 850px){
     .window-content {
         display: block;
-        min-height: 500px;
         margin: 10px;
         width: auto;
     }
@@ -399,12 +398,79 @@ tr > td {
     }
     .navigation {
         padding: 10px 1px 0px;
-        font-family: var(--windowsfont);
         display: flow-root;
     }
     .dropdown {
         position: relative;
         display: inline-block;
         margin: 0px 0px 0px -8px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .tbl-with-img {
+        display: block;
+        text-align: -webkit-center;
+    }
+    .tbl-with-img > table {
+        width: auto;
+    }
+    tr > td {
+        min-width: 150px;
+        font-size: 14px;
+    }
+    .menubtn {
+        font-size: 14px;
+    }
+    .current-page {
+        font-size: 14px;
+    }
+    
+    ul {
+        display: block;
+    }
+
+    li {
+        margin: 2px 0px;
+        padding: 0px;
+    }
+
+    li > button 
+    {
+        width: -webkit-fill-available;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .instructions {
+        display: flex;
+        height: 250px;
+        background-color: var(--windowColor);
+        font-size: 28px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .week .weekhead, .week .weeksubhead {
+        font-size: 32px;
+    }
+    .week .weeksubhead {
+        font-size: 26px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #F1F1D8;
+        min-width: 300px;
+        border: 1px solid dimgray;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 8px 5px;
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
     }
 }
