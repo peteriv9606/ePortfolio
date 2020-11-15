@@ -416,8 +416,9 @@ tr > td {
         width: auto;
     }
     tr > td {
-        min-width: 150px;
+        min-width: 100px;
         font-size: 14px;
+        flex-wrap: wrap;
     }
     .menubtn {
         font-size: 14px;
@@ -472,5 +473,27 @@ tr > td {
         text-decoration: none;
         display: block;
         font-size: 12px;
+    }
+    .nav-mini, .nav-maxi, .nav-close {
+        display: flex;
+        background-color: #ADADA5;
+        color: black;
+        padding: 0px 10px;
+        margin: 0px 0.5px;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        min-width: 14px;
+        min-height: 20px;
+    }
+
+    .current-window {
+        display: flex;
+        float: left;
+        font-size: 12px;
+    }
+
+    .main-window-wrapper{
+        margin: 10% 0%;
     }
 }
