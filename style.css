@@ -370,11 +370,13 @@ tr > td {
     height: -webkit-fill-available;
 }
 
-.ach embed{
-    width: inherit;
-    height: inherit;
+.ach img{
+    width: 100%;
 }
 
+ul.microsoft{
+    display: none;
+}
 
 @media screen and (max-width: 1200px){
     .main-container{
@@ -384,7 +386,7 @@ tr > td {
     }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1000px){
     .window-content {
         display: block;
         margin: 10px;
@@ -398,14 +400,22 @@ tr > td {
         display: block;
         width: 100%
     }
+
+   
+
     ul {
-        display: flex;
         flex-wrap: wrap;
         list-style: none;
         padding: 0px;
         margin: 0px;
         justify-content: center;
     }
+
+    li>button{
+        min-width: 270px;
+    }
+    
+
     .navigation {
         padding: 10px 1px 0px;
         display: flow-root;

@@ -11,7 +11,9 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
         <script>
             var first = 0;
+            var firstMenu = 0;
             var olaAch = "";
+            var oldMenu = "";
             var isinstruct = 1;
             var clickTrigger = window.location.search.substring(1);
             window.onload = function() {
@@ -21,6 +23,36 @@
 
             function loadPage(page) {
                 window.location.href = page;
+            }
+
+            function expand(menu){
+               // alert("Pressed Expand with menu: " + menu + " First menu = "+ firstMenu);
+                if(firstMenu==0){
+                    //first time
+                    //alert("Pressed "+menu+" for the first time!");
+                    firstMenu=1;
+                    oldMenu = menu;
+                    document.getElementById(menu).style.display = "block";    
+                }
+                else{
+                    if(oldMenu != menu){
+                        //change (different)
+                        //alert("Changing menu's.. (Was" + oldMenu + ", now is pressed "+ menu + ")");
+                        document.getElementById(oldMenu).style.display = "none";
+                        document.getElementById(menu).style.display = "block";
+                        
+                        firstMenu = 0;
+                        oldMenu = "";
+                        
+                    }
+                    else{
+                        //pressed again
+                        //alert("Pressed again! (" + menu + " = " + oldMenu + "). Now Hiding.");
+                        document.getElementById(menu).style.display = "none";
+                        firstMenu = 0;
+                        oldMenu = "";
+                    }
+                }
             }
 
             function loadAch(ach){
@@ -128,14 +160,22 @@
 
                     <div class="window-content">
                         <div class="left-side" id="left-side">
-                            <ul>
-                                <li><button type="button" onclick="loadAch('a1')">1. Work With Computers</button></li>
-                                <li><button type="button" onclick="loadAch('a2')">2. Access information online</button></li>
-                                <li><button type="button" onclick="loadAch('a3')">3. Communicate online</button></li>
-                                <li><button type="button" onclick="loadAch('a4')">4. Participate safely and responsibly online</button></li>
-                                <li><button type="button" onclick="loadAch('a5')">5. Create digital content</button></li>
-                                <li><button type="button" onclick="loadAch('a6')">6. Collaborate and manage content digitally</button></li>
-                            </ul>
+                           <ul>
+                                <li> 
+                                    <button type="button" onclick="expand('microsoft')">
+                                        <img src="resources/images/microsoft.png" alt="https://www.stickpng.com/img/icons-logos-emojis/tech-companies/microsoft-logo" style="width: 100px;">
+                                    </button>
+                                   
+                                    <ul class="microsoft" id="microsoft">
+                                        <li><button type="button" onclick="loadAch('a1')">1. Work With Computers</button></li>
+                                        <li><button type="button" onclick="loadAch('a2')">2. Access information online</button></li>
+                                        <li><button type="button" onclick="loadAch('a3')">3. Communicate online</button></li>
+                                        <li><button type="button" onclick="loadAch('a4')">4. Participate safely and responsibly online</button></li>
+                                        <li><button type="button" onclick="loadAch('a5')">5. Create digital content</button></li>
+                                        <li><button type="button" onclick="loadAch('a6')">6. Collaborate and manage content digitally</button></li>
+                                    </ul>
+                                </li>
+                           </ul>
                         </div>
                         <div class="right-side" id="right-side">
                             <div class="instructions" id="instructions">
@@ -143,22 +183,34 @@
                                 Please, use the buttons to view a certain achievement/certificate.
                             </div>
                             <div class="ach" id="a1">
-                                <embed type="application/pdf" src="resources/MSCert/1.WWC.pdf">
+                                <a href="resources/MSCert/1.WWC/1.WWC.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/1.WWC/1.WWC-1.png">
+                                </a>
                             </div>
                             <div class="ach" id="a2">
-                                <embed type="application/pdf" src="resources/MSCert/2.AIO.pdf">
+                                <a href="resources/MSCert/2.AIO/2.AIO.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/2.AIO/2.AIO-1.png">
+                                </a>
                             </div>
                             <div class="ach" id="a3">
-                                <embed type="application/pdf" src="resources/MSCert/3.CO.pdf">
+                                <a href="resources/MSCert/3.CO/3.CO.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/3.CO/3.CO-1.png">
+                                </a>
                             </div>
                             <div class="ach" id="a4">
-                                <embed type="application/pdf" src="resources/MSCert/4.PSARO.pdf">
+                                <a href="resources/MSCert/4.PSARO/4.PSARO.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/4.PSARO/4.PSARO-1.png">
+                                </a>
                             </div>
                             <div class="ach" id="a5">
-                                <embed type="application/pdf" src="resources/MSCert/5.CDC.pdf">
+                                <a href="resources/MSCert/5.CDC/5.CDC.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/5.CDC/5.CDC-1.png">
+                                </a>
                             </div>
                             <div class="ach" id="a6">
-                                <embed type="application/pdf" src="resources/MSCert/6.CAMCD.pdf">
+                                <a href="resources/MSCert/6.CAMCD/6.CAMCD.pdf" type="application/pdf">
+                                    <img src="resources/MSCert/6.CAMCD/6.CAMCD-1.png">
+                                </a>
                             </div>
                             
                         </div> 
