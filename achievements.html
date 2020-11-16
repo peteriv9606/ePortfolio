@@ -11,61 +11,59 @@
         <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
         <script>
             var first = 0;
-            var oldWeek = "";
+            var olaAch = "";
             var isinstruct = 1;
             var clickTrigger = window.location.search.substring(1);
             window.onload = function() {
                 if(clickTrigger)
-                loadWeek(clickTrigger);
+                loadAch(clickTrigger);
             }
-
-
 
             function loadPage(page) {
                 window.location.href = page;
             }
 
-            function loadWeek(week){
+            function loadAch(ach){
                 if(first==0){
                     //first time
-                    if(week != "instructions"){
+                    if(ach != "instructions"){
                     document.getElementById("instructions").style.display = "none";
                     isinstruct=0;
-                    //alert("Pressed "+week+" for the first time!");
+                    //alert("Pressed "+ach+" for the first time!");
                     first=1;
-                    oldWeek = week;
-                    document.getElementById(week).style.display = "block";
-                    document.getElementById('selected').innerHTML = "> " + week;
+                    oldach = ach;
+                    document.getElementById(ach).style.display = "block";
+                    document.getElementById('selected').innerHTML = "> " + ach;
                     }
                     
                 }
                 else{
-                    if(oldWeek!=week){
-                        //alert("Changing weeks.. (Was" + oldWeek + ", now is ressed "+ week + ")");
-                        document.getElementById(oldWeek).style.display = "none";
-                        if(week != "instructions")
+                    if(oldach!=ach){
+                        //alert("Changing ach's.. (Was" + oldach + ", now is pressed "+ ach + ")");
+                        document.getElementById(oldach).style.display = "none";
+                        if(ach != "instructions")
                         {
-                            document.getElementById(week).style.display = "block";
-                            document.getElementById('selected').innerHTML = "> " + week;
-                            oldWeek=week;
+                            document.getElementById(ach).style.display = "block";
+                            document.getElementById('selected').innerHTML = "> " + ach;
+                            oldach = ach;
                         }
                         else
                         {
                             isinstruct = 1;
-                            document.getElementById(week).style.display = "none";
+                            document.getElementById(ach).style.display = "none";
                             document.getElementById("instructions").style.display = "flex";
                             document.getElementById('selected').innerHTML = "";
                             first = 0;
-                            oldWeek = "";
+                            oldach = "";
                         }
                     }
                     else{
-                        //alert("Pressed again! (" + week + " = " + oldWeek + "). Now Hiding.");
-                        document.getElementById(week).style.display = "none";
+                        //alert("Pressed again! (" + ach + " = " + oldach + "). Now Hiding.");
+                        document.getElementById(ach).style.display = "none";
                         document.getElementById("instructions").style.display = "flex";
                         document.getElementById('selected').innerHTML = "";
                         first = 0;
-                        oldWeek = "";
+                        oldach = "";
                     }
                 }
             }
@@ -123,7 +121,7 @@
                     <hr style="margin: 0px 0px 5px;">
                     <div class="current-page">
                         <div class="fas fa-cogs" >
-                            <a class="txt" onclick="loadWeek('instructions')" style="font-family: Segoe UI;">> (LDE) Assessment</a>
+                            <a class="txt" onclick="loadAch('instructions')" style="font-family: Segoe UI;">> Achievements</a>
                             <i><a id="selected" style="cursor: pointer;"></a></i>
                         </div>
                     </div>
@@ -131,60 +129,38 @@
                     <div class="window-content">
                         <div class="left-side" id="left-side">
                             <ul>
-                                <li><button type="button" onclick="loadWeek('w1')">(Week 1) - Your digital Life</button></li>
-                                <li><button type="button" onclick="loadWeek('w2')">(Week 2) - Getting up and running (your digital environment)</button></li>
-                                <li><button type="button" onclick="loadWeek('w3')">(Week 3) - Making your mark online</button></li>
-                                <li><button type="button" onclick="loadWeek('w4')">(Week 4) - Staying safe online</button></li>
-                                <li><button type="button" onclick="loadWeek('w5')">(Week 5) - Critical Consumption</button></li>
-                                <li><button type="button" onclick="loadWeek('w6')">(Week 6) - The right tool for the right job</button></li>
-                                <li><button type="button" onclick="loadWeek('w7')">(Week 7) - Being Digital and making it work for you</button></li>
-                                <li><button type="button" onclick="loadWeek('w8')">(Week 8) - Continuing your digital journey</button></li>
+                                <li><button type="button" onclick="loadAch('a1')">1. Work With Computers</button></li>
+                                <li><button type="button" onclick="loadAch('a2')">2. Access information online</button></li>
+                                <li><button type="button" onclick="loadAch('a3')">3. Communicate online</button></li>
+                                <li><button type="button" onclick="loadAch('a4')">4. Participate safely and responsibly online</button></li>
+                                <li><button type="button" onclick="loadAch('a5')">5. Create digital content</button></li>
+                                <li><button type="button" onclick="loadAch('a6')">6. Collaborate and manage content digitally</button></li>
                             </ul>
                         </div>
                         <div class="right-side" id="right-side">
                             <div class="instructions" id="instructions">
-                                Please, use the buttons to view a certain week.
+                                Achievements and certificates achieved along my course study at University of Wales Trinity Saint David.<br>
+                                Please, use the buttons to view a certain achievement/certificate.
                             </div>
-                            <div class="week one" id="w1">
-                                <div class="weekhead">Your Digital Life</div>
-                                <div class="weeksubhead">Week 1</div>
-                                <hr>
+                            <div class="ach" id="a1">
+                                <embed type="application/pdf" src="resources/MSCert/1.WWC.pdf">
                             </div>
-                            <div class="week two" id="w2">
-                                <div class="weekhead">Getting up and running (your digital environment)</div>
-                                <div class="weeksubhead">Week 2</div>
-                                <hr>
+                            <div class="ach" id="a2">
+                                <embed type="application/pdf" src="resources/MSCert/2.AIO.pdf">
                             </div>
-                            <div class="week three" id="w3">
-                                <div class="weekhead">Making your mark online</div>
-                                <div class="weeksubhead">Week 3</div>
-                                <hr>
+                            <div class="ach" id="a3">
+                                <embed type="application/pdf" src="resources/MSCert/3.CO.pdf">
                             </div>
-                            <div class="week four" id="w4">
-                                <div class="weekhead">Staying safe online</div>
-                                <div class="weeksubhead">Week 4</div>
-                                <hr>
+                            <div class="ach" id="a4">
+                                <embed type="application/pdf" src="resources/MSCert/4.PSARO.pdf">
                             </div>
-                            <div class="week five" id="w5">
-                                <div class="weekhead">Critical Consumption</div>
-                                <div class="weeksubhead">Week 5</div>
-                                <hr>
+                            <div class="ach" id="a5">
+                                <embed type="application/pdf" src="resources/MSCert/5.CDC.pdf">
                             </div>
-                            <div class="week six" id="w6">
-                                <div class="weekhead">The right tool for the right job</div>
-                                <div class="weeksubhead">Week 6</div>
-                                <hr>
+                            <div class="ach" id="a6">
+                                <embed type="application/pdf" src="resources/MSCert/6.CAMCD.pdf">
                             </div>
-                            <div class="week seven" id="w7">
-                                <div class="weekhead">Being Digital and making it work for you</div>
-                                <div class="weeksubhead">Week 7</div>
-                                <hr>
-                            </div>
-                            <div class="week eight" id="w8">
-                                <div class="weekhead">Continuing your digital journey</div>
-                                <div class="weeksubhead">Week 8</div>
-                                <hr>
-                            </div>
+                            
                         </div> 
                     </div>
                 </div>

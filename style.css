@@ -364,6 +364,16 @@ tr > td {
 .week.eight{
 }
 
+.ach{
+    display:none;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.ach embed{
+    width: inherit;
+    height: inherit;
+}
 
 
 @media screen and (max-width: 1200px){
