@@ -507,6 +507,10 @@ ul.microsoft{
         min-height: 20px;
     }
 
+    .nav-close{
+        background-color: #e50000;
+        color: white;
+    }
     .current-window {
         display: flex;
         float: left;
