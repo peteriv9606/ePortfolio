@@ -413,7 +413,7 @@ tr > td {
         text-align: -webkit-center;
     }
     .tbl-with-img > table {
-        width: auto;
+        min-width: 300px;
     }
     tr > td {
         min-width: 100px;
