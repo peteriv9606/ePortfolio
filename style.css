@@ -465,7 +465,7 @@ ul.microsoft{
 
     .instructions {
         display: flex;
-        height: 250px;
+        height: 400px;
         background-color: var(--windowColor);
         font-size: 28px;
         justify-content: center;
