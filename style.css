@@ -498,8 +498,9 @@ ul.microsoft{
 
     .dropdown:active .dropdown-content:active {
         display: block;
-        
       }
+
+    
 
     .nav-mini, .nav-maxi, .nav-close {
         display: flex;
