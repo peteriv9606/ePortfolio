@@ -229,15 +229,6 @@ h6 { font-size: 16px;}
     
   }
 
-
-
-.window-subcontent{
-    display:flex;
-    width:30%;
-    background-color: red;
-    height:1220px;
-}
-
 .window-content{
     display:flex;
     min-height: 500px;
@@ -315,6 +306,7 @@ tr > td {
 
 .week{
     display :none;
+    margin: 0% 10%;
 }
 
 .week .weekhead, .week .weeksubhead{
@@ -328,6 +320,7 @@ tr > td {
 .week .weeksubhead{
     font-size: 40px;
     font-style: italic;
+    color: var(--borderColor);
 }
 
 .week hr{
@@ -338,6 +331,23 @@ tr > td {
     border-radius: 50%;
     background-color: lightgray;
 }
+
+.week p{
+    text-indent: 50px;
+    text-align: justify;
+}
+
+
+
+div.instructions p,div.week p{
+    background-color: white;
+    font-size: 16px;
+    color: var(--secondaryColor);
+    margin: 5% 10%;
+
+}
+
+
 
 .week.one{
 }
@@ -401,7 +411,9 @@ ul.microsoft{
         width: 100%
     }
 
-   
+   .week {
+    margin: 5% 10%;
+   }
 
     ul {
         flex-wrap: wrap;
@@ -465,7 +477,6 @@ ul.microsoft{
 
     .instructions {
         display: flex;
-        height: 400px;
         background-color: var(--windowColor);
         font-size: 28px;
         justify-content: center;
