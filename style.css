@@ -335,17 +335,46 @@ tr > td {
 .week p{
     text-indent: 50px;
     text-align: justify;
-}
-
-
-
-div.instructions p,div.week p{
+    margin: 1% 10%;
     background-color: white;
     font-size: 16px;
     color: var(--secondaryColor);
+}
+
+
+
+div.instructions p{
+    display:block;
+    background-color: white;
+    font-size: 20px;
+    color: var(--secondaryColor);
     margin: 5% 10%;
+    text-align: justify;
+}
+
+table.weekActivity{
+    margin: 1%;
+    padding: 1%;
+    border: 1px solid var(--borderColor);
 
 }
+
+tr.weekRow > th{
+    font-family: var(--windowsfont);
+    font-size: 16px;
+    text-align: center;
+}
+
+tr.weekRow > td{
+    min-width: 100px;
+    font-size: 14px;
+    font-family: var(--windowsfont);
+    text-align: justify;
+    border: 1px solid var(--borderColor);
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
 
 
 
@@ -437,6 +466,18 @@ ul.microsoft{
         display: inline-block;
         margin: 0px 0px 0px -8px;
     }
+
+
+    tr.weekRow > td{
+        min-width: 50px;
+        font-size: 12px;
+        font-family: var(--windowsfont);
+        text-align: justify;
+        border: 1px solid var(--borderColor);
+        padding: 2px 5px;
+        vertical-align: top;
+    }
+
 }
 
 @media screen and (max-width: 750px){
