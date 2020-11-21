@@ -583,7 +583,9 @@ ul.microsoft{
     .week .weeksubhead {
         font-size: 26px;
     }
-
+    .week p{
+        margin: 1% 0%;
+    }
     
    
 
