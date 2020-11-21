@@ -341,6 +341,28 @@ tr > td {
     color: var(--secondaryColor);
 }
 
+.week p.results{
+    text-align: center;
+    text-indent: 0px;
+}
+
+.week table.results{
+    border: 1px solid black; 
+    width: fit-content; 
+    min-width: 170px;
+    color: var(--secondaryColor);
+}
+
+table.results > th{
+
+}
+
+table.results > td{
+    min-width: 0px;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
 
 
 div.instructions p{
@@ -355,6 +377,7 @@ div.instructions p{
 table.weekActivity{
     margin: 1%;
     padding: 1%;
+    min-width: 230px;
     border: 1px solid var(--borderColor);
 
 }
@@ -513,7 +536,9 @@ ul.microsoft{
     {
         width: -webkit-fill-available;
         padding: 5px;
+        min-width: 5px;
         font-size: 12px;
+
     }
 
     .instructions {
@@ -530,6 +555,16 @@ ul.microsoft{
     }
     .week .weeksubhead {
         font-size: 26px;
+    }
+
+    table.results tbody > tr > th{
+
+    }
+    
+    table.results tbody > tr > td{
+        min-width: 0px;
+        font-size: 14px;
+        flex-wrap: wrap;
     }
 
     .dropdown-content {
