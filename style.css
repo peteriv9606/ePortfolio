@@ -306,7 +306,7 @@ tr > td {
 
 .week{
     display :none;
-    margin: 0% 10%;
+    margin: 0% 10% 5%;
 }
 
 .week .weekhead, .week .weeksubhead{
@@ -333,9 +333,9 @@ tr > td {
 }
 
 .week p{
-    text-indent: 50px;
+    text-indent: 25px;
     text-align: justify;
-    margin: 1% 10%;
+    margin: 1% 2%;
     background-color: white;
     font-size: 16px;
     color: var(--secondaryColor);
@@ -347,10 +347,13 @@ tr > td {
 }
 
 .week table.results{
-    border: 1px solid black; 
-    width: fit-content; 
+    border: 1px solid black;
+    width: fit-content;
     min-width: 170px;
+    margin: 0px auto;
     color: var(--secondaryColor);
+    font-size: 18px;
+    text-align: center;
 }
 
 table.results > th{
@@ -363,6 +366,11 @@ table.results > td{
     flex-wrap: wrap;
 }
 
+ul.inWeekList{
+    margin: 0px 50px;
+    list-style: disc;
+    text-align: justify;
+}
 
 
 div.instructions p{
@@ -377,10 +385,15 @@ div.instructions p{
 table.weekActivity{
     margin: 1%;
     padding: 1%;
-    min-width: 230px;
+    min-width: 100px;
     border: 1px solid var(--borderColor);
-
+    overflow: scroll;
 }
+
+tr.weekRow{
+    vertical-align: top;
+}
+
 
 tr.weekRow > th{
     font-family: var(--windowsfont);
@@ -464,8 +477,19 @@ ul.microsoft{
     }
 
    .week {
-    margin: 5% 10%;
+    margin: 0% 10% 5%;
    }
+
+   
+   table.results tbody > tr > th{
+    font-size: 16px;
+    }
+
+    table.results tbody > tr > td{
+        min-width: 0px;
+        font-size: 14px;
+        flex-wrap: wrap;
+    }
 
     ul {
         flex-wrap: wrap;
@@ -557,13 +581,16 @@ ul.microsoft{
         font-size: 26px;
     }
 
-    table.results tbody > tr > th{
+    
+   
 
+    table.results tbody > tr > th{
+        font-size: 14px;
     }
     
     table.results tbody > tr > td{
         min-width: 0px;
-        font-size: 14px;
+        font-size: 12px;
         flex-wrap: wrap;
     }
 
