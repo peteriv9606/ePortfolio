@@ -477,7 +477,7 @@ ul.microsoft{
     }
 
    .week {
-    margin: 0% 10% 5%;
+    margin: 0% 2% 5%;
    }
 
    
@@ -574,6 +574,9 @@ ul.microsoft{
         text-align: center;
     }
 
+    .week {
+        margin: 0% 2% 5%;
+    }
     .week .weekhead, .week .weeksubhead {
         font-size: 32px;
     }
