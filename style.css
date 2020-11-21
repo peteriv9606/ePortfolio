@@ -480,6 +480,9 @@ ul.microsoft{
     margin: 0% 2% 5%;
    }
 
+   ul.inWeekList {
+    margin: 0% 10%;
+    }
    
    table.results tbody > tr > th{
     font-size: 16px;
@@ -585,9 +588,11 @@ ul.microsoft{
     }
     .week p{
         margin: 1% 0%;
+
     }
-    
-   
+    ul.inWeekList {
+    margin: 0% 10%;
+    }
 
     table.results tbody > tr > th{
         font-size: 14px;
