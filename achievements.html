@@ -15,6 +15,7 @@
             var olaAch = "";
             var oldMenu = "";
             var isinstruct = 1;
+            var currMenuClass = "";
             var clickTrigger = window.location.search.substring(1);
             window.onload = function() {
                 if(clickTrigger)
@@ -26,10 +27,19 @@
             }
 
             function expand(menu){
+                if(currMenuClass=="" && prevMenuClass!=currMenuClass){
+                    //Opening this menu class for the first time
+                    var currMenuClass = menu;
+                    alert("Pressed class")
+
+
+
+                    //FIX THIS^^^^^^^^^
+                }
                // alert("Pressed Expand with menu: " + menu + " First menu = "+ firstMenu);
                 if(firstMenu==0){
                     //first time
-                    //alert("Pressed "+menu+" for the first time!");
+                    alert("Pressed "+menu+" for the first time!");
                     firstMenu=1;
                     oldMenu = menu;
                     document.getElementById(menu).style.display = "block";    
@@ -37,20 +47,22 @@
                 else{
                     if(oldMenu != menu){
                         //change (different)
-                        //alert("Changing menu's.. (Was" + oldMenu + ", now is pressed "+ menu + ")");
+                        alert("Changing menu's.. (Was" + oldMenu + ", now is pressed "+ menu + ")");
                         document.getElementById(oldMenu).style.display = "none";
                         document.getElementById(menu).style.display = "block";
+                        oldMenu = menu;
                         
-                        firstMenu = 0;
-                        oldMenu = "";
+                        
                         
                     }
                     else{
                         //pressed again
-                        //alert("Pressed again! (" + menu + " = " + oldMenu + "). Now Hiding.");
+                        alert("Pressed again! (" + menu + " = " + oldMenu + "). Now Hiding.");
+                        
                         document.getElementById(menu).style.display = "none";
                         firstMenu = 0;
                         oldMenu = "";
+                        menu = "";
                     }
                 }
             }
@@ -163,6 +175,9 @@
                                 <li> 
                                     <button type="button" onclick="expand('microsoft')">
                                         <img src="resources/images/microsoft.png" alt="https://www.stickpng.com/img/icons-logos-emojis/tech-companies/microsoft-logo" style="width: 100px;">
+                                    </button>
+                                    <button type="button" onclick="expand('openlearn')">
+                                        <img src="resources/images/openlearn.png" alt="https://cdn.freebiesupply.com/logos/large/2x/the-open-university-logo-png-transparent.png" style="width: 100px;">
                                     </button>
                                    
                                     <ul class="microsoft" id="microsoft">

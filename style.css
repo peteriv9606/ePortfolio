@@ -387,7 +387,7 @@ table.weekActivity{
     padding: 1%;
     min-width: 100px;
     border: 1px solid var(--borderColor);
-    overflow: scroll;
+    overflow: auto;
 }
 
 tr.weekRow{
@@ -407,7 +407,7 @@ tr.weekRow > td{
     font-family: var(--windowsfont);
     text-align: justify;
     border: 1px solid var(--borderColor);
-    padding: 5px 10px;
+    padding: 0px 2px;
     vertical-align: top;
 }
 
