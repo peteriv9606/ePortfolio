@@ -29,7 +29,6 @@ h1, h2, h3, h4, h5, h6, strong {
 }
 
 a, p, li, span, label, input, textarea {
-    color: var(--secondaryText);
     font-family: 'Segoe UI';
     text-decoration: none;
 }
@@ -411,34 +410,6 @@ tr.weekRow > td{
     vertical-align: top;
 }
 
-
-
-
-.week.one{
-}
-
-.week.two{
-    
-}
-
-.week.three{
-}
-
-.week.four{
-}
-
-.week.five{
-}
-
-.week.six{
-}
-
-.week.seven{
-}
-
-.week.eight{
-}
-
 .ach{
     display:none;
     width: -webkit-fill-available;
@@ -611,6 +582,7 @@ ul.menuClass{
         min-width: 300px;
         border: 1px solid dimgray;
         z-index: 1;
+        margin: 0% -190px;
     }
     .dropdown-content a {
         color: black;
