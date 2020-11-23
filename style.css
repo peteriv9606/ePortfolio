@@ -26,6 +26,8 @@ h1, h2, h3, h4, h5, h6, strong {
     color: var(--mainText);
     font-family: 'Russo One', sans-serif;
     font-weight: 500;
+    margin: 0px;
+    text-align: center;
 }
 
 a, p, li, span, label, input, textarea {
@@ -67,7 +69,6 @@ h6 { font-size: 16px;}
     background-color: #464646;
     border-bottom: 1px solid  var(--borderColor);
     overflow: auto;
-    height: 100px;
 }
 
 .main-container {
@@ -291,8 +292,6 @@ tr > td {
 }
 
 
-
-
 .instructions{
     display: flex;
     height: 100%;
@@ -353,10 +352,6 @@ tr > td {
     color: var(--secondaryColor);
     font-size: 18px;
     text-align: center;
-}
-
-table.results > th{
-
 }
 
 table.results > td{
@@ -423,6 +418,65 @@ tr.weekRow > td{
 ul.menuClass{
     display: none;
 }
+
+div.footer{
+    display: flex;
+    height: fit-content;
+    padding: 1%;
+}
+
+div.sitemap{
+    width:60%;
+}
+
+ul.footerList{
+    margin: 0% 5%;
+    font-style: italic;
+    font-size: 14px;
+}
+
+ul.footerListSub{
+    display: none;
+    margin: 0% 2%;
+    padding: 0% 2%;
+    border-left: 1px solid dimgray;
+    border-left-width: thick;
+    font-size: 12px;
+}
+
+ul.footerListSub > li  a,
+ul.footerList > li > a{
+    color:black;
+}
+ul.footerListSub > li > a:hover,
+ul.footerList > li > a :hover{
+    text-decoration:underline;
+}
+
+button.expandBtn{
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+button.expandBtn:focus{
+    outline: none;
+}
+
+div.social{
+    width:50%;
+
+}
+
+div.contact{
+    width:50%;
+
+}
+
+
 
 @media screen and (max-width: 1200px){
     .main-container{

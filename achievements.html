@@ -16,7 +16,9 @@
             var oldMenu = "";
             var isinstruct = 1;
             var expandedMenu = "";
+            var currCourse = "";
             var clickTrigger = window.location.search.substring(1);
+            
             window.onload = function() {
                 if(clickTrigger)
                 loadAch(clickTrigger);
@@ -34,7 +36,9 @@
                     //alert("Pressed "+menu+" for the first time!");
                     firstMenu=1;
                     oldMenu = menu;
-                    document.getElementById(menu).style.display = "block";    
+                    document.getElementById(menu).style.display = "block";  
+                    document.getElementById('selected').innerHTML = "> " + menu;
+                    currCourse = document.getElementById('selected').innerHTML;
                 }
                 else{
                     if(oldMenu != menu){
@@ -42,21 +46,29 @@
                         //alert("Changing menu's.. (Was" + oldMenu + ", now is pressed "+ menu + ")");
                         document.getElementById(oldMenu).style.display = "none";
                         document.getElementById(menu).style.display = "block";
+                        document.getElementById('selected').innerHTML = "> " + menu;
+                        currCourse = document.getElementById('selected').innerHTML;
                         oldMenu = menu;
+                        loadAch("instructions");
                     }
                     else{
                         //pressed again
                         //alert("Pressed again! (" + menu + " = " + oldMenu + "). Now Hiding.");
                         
                         document.getElementById(menu).style.display = "none";
+                        loadAch("instructions");
+                        isinstruct = 1;
+                        document.getElementById('selected').innerHTML = "" ;
                         firstMenu = 0;
                         oldMenu = "";
                         menu = "";
+                        currCourse = "";
                     }
                 }
             }
 
             function loadAch(ach){
+                
                 if(first==0){
                     //first time
                     if(ach != "instructions"){
@@ -66,7 +78,9 @@
                     first=1;
                     oldach = ach;
                     document.getElementById(ach).style.display = "block";
-                    document.getElementById('selected').innerHTML = "> " + ach;
+                    //alert("Selected is: "+ document.getElementById('selected').innerHTML);
+                    currCourse = document.getElementById('selected').innerHTML;
+                    document.getElementById('selected').innerHTML = currCourse + "> " + ach;
                     }
                     
                 }
@@ -77,7 +91,7 @@
                         if(ach != "instructions")
                         {
                             document.getElementById(ach).style.display = "block";
-                            document.getElementById('selected').innerHTML = "> " + ach;
+                            document.getElementById('selected').innerHTML = currCourse + "> " + ach;
                             oldach = ach;
                         }
                         else
@@ -88,6 +102,7 @@
                             document.getElementById('selected').innerHTML = "";
                             first = 0;
                             oldach = "";
+                            document.getElementById('selected').innerHTML = currCourse;
                         }
                     }
                     else{
@@ -97,11 +112,10 @@
                         document.getElementById('selected').innerHTML = "";
                         first = 0;
                         oldach = "";
+                        document.getElementById('selected').innerHTML = currCourse;
                     }
                 }
             }
-
-
             </script>
        </head>
     <body>
@@ -167,12 +181,12 @@
                                     </button>
                                                                        
                                     <ul class="menuClass" id="microsoft">
-                                        <li><button type="button" onclick="loadAch('a1')">1. Work With Computers</button></li>
-                                        <li><button type="button" onclick="loadAch('a2')">2. Access information online</button></li>
-                                        <li><button type="button" onclick="loadAch('a3')">3. Communicate online</button></li>
-                                        <li><button type="button" onclick="loadAch('a4')">4. Participate safely and responsibly online</button></li>
-                                        <li><button type="button" onclick="loadAch('a5')">5. Create digital content</button></li>
-                                        <li><button type="button" onclick="loadAch('a6')">6. Collaborate and manage content digitally</button></li>
+                                        <li><button type="button" onclick="loadAch('WWC')">1. Work With Computers</button></li>
+                                        <li><button type="button" onclick="loadAch('AIO')">2. Access information online</button></li>
+                                        <li><button type="button" onclick="loadAch('CO')">3. Communicate online</button></li>
+                                        <li><button type="button" onclick="loadAch('PSARO')">4. Participate safely and responsibly online</button></li>
+                                        <li><button type="button" onclick="loadAch('CDC')">5. Create digital content</button></li>
+                                        <li><button type="button" onclick="loadAch('CAMCD')">6. Collaborate and manage content digitally</button></li>
                                     </ul>
                                 </li>
                                 <li> 
@@ -193,32 +207,32 @@
                                 Achievements and certificates achieved along my course study at University of Wales Trinity Saint David.<br>
                                 Please, use the buttons to view a certain achievement/certificate.
                             </div>
-                            <div class="ach" id="a1">
+                            <div class="ach" id="WWC">
                                 <a href="resources/MSCert/1.WWC/1.WWC.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/1.WWC/1.WWC-1.png">
                                 </a>
                             </div>
-                            <div class="ach" id="a2">
+                            <div class="ach" id="AIO">
                                 <a href="resources/MSCert/2.AIO/2.AIO.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/2.AIO/2.AIO-1.png">
                                 </a>
                             </div>
-                            <div class="ach" id="a3">
+                            <div class="ach" id="CO">
                                 <a href="resources/MSCert/3.CO/3.CO.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/3.CO/3.CO-1.png">
                                 </a>
                             </div>
-                            <div class="ach" id="a4">
+                            <div class="ach" id="PSARO">
                                 <a href="resources/MSCert/4.PSARO/4.PSARO.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/4.PSARO/4.PSARO-1.png">
                                 </a>
                             </div>
-                            <div class="ach" id="a5">
+                            <div class="ach" id="CDC">
                                 <a href="resources/MSCert/5.CDC/5.CDC.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/5.CDC/5.CDC-1.png">
                                 </a>
                             </div>
-                            <div class="ach" id="a6">
+                            <div class="ach" id="CAMCD">
                                 <a href="resources/MSCert/6.CAMCD/6.CAMCD.pdf" type="application/pdf" target="_blank">
                                     <img src="resources/MSCert/6.CAMCD/6.CAMCD-1.png">
                                 </a>
