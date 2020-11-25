@@ -434,6 +434,11 @@ ul.footerList{
     font-size: 14px;
 }
 
+ul.footerList a:hover,
+ul.footerList button:hover{
+    color:var(--mainColor);
+}
+
 ul.footerListSub{
     display: none;
     margin: 0% 2%;
@@ -475,9 +480,89 @@ div.contact{
 
 }
 
+div.contactDetails {
+    display: flex;
+    font-size: 14px;
+    margin: 1% 0%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.contactDetails > a {
+    color: var(--mainText);
+    display: block;
+    margin: 2% 4%;
+    font-weight: 100;
+    padding: 5px;
+    text-align: center;
+}
+
+div.contactDetails > a:hover{
+    color:var(--mainColor);
+}
+
+div.contactDetails > a i.material-icons {
+    font-size: 26px;
+    display: block;
+}
+
+
 div.sitemap{
     width:50%;
 }
+
+div.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    margin: 5%;
+}
+
+div.socialIcons > a.fab, 
+div.socialIcons > a.fa {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    width: 20px;
+    margin: 0% 1%;
+ }
+ 
+ a.fab:hover {
+     opacity: 0.7;
+ }
+
+    a.fab.fa-facebook-f {
+        background: #3B5998;
+        color: white;
+    }
+
+    a.fab.fa-linkedin-in {
+        background: #007bb5;
+        color: white;
+    }
+    a.fab.fa-instagram {
+        color: white;
+        background: #f09433; 
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+
+    a.fab.fa-github {
+        background: white;
+        color: black;
+
+    }
+
+    hr.footerHR{
+        display: none;
+        border: 1px var(--borderColor) solid;
+        border-radius: 50%;
+    }
+
 
 
 @media screen and (max-width: 1200px){
@@ -556,6 +641,42 @@ div.sitemap{
     }
 
 }
+@media screen and (max-width: 850px){
+    div.footer {
+        display: block;
+    }
+    div.sitemap, div.social, div.contact{
+        width:100%;
+    }
+    ul.footerList {
+        margin: 0%;
+        text-align: center;
+        margin-left: 0%;
+    }
+    button.expandBtn{
+        width: 0px;
+        min-width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    hr.footerHR{
+        display: block;
+    }
+    
+    div.contactDetails {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        margin: 1%;
+        flex-wrap: wrap;
+    }
+
+    div.socialIcons {
+        margin: 2%;
+    }
+}
+
+
 
 @media screen and (max-width: 750px){
     .tbl-with-img {
