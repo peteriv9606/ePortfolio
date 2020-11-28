@@ -10,114 +10,9 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
         <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
-        <script>
-            var first = 0;
-            var firstMenu = 0;
-            var olaAch = "";
-            var oldMenu = "";
-            var isinstruct = 1;
-            var expandedMenu = "";
-            var currCourse = "";
-            var clickTrigger = window.location.search.substring(1);
-            
-            window.onload = function() {
-                if(clickTrigger)
-                loadAch(clickTrigger);
-            }
-
-            function loadPage(page) {
-                window.location.href = page;
-            }
-
-            function expand(menu){
-                
-               // alert("Pressed Expand with menu: " + menu + " First menu = "+ firstMenu);
-                if(firstMenu==0){
-                    //first time
-                    //alert("Pressed "+menu+" for the first time!");
-                    firstMenu=1;
-                    oldMenu = menu;
-                    document.getElementById(menu).style.display = "block";  
-                    document.getElementById('selected').innerHTML = "> " + menu;
-                    currCourse = document.getElementById('selected').innerHTML;
-                }
-                else{
-                    if(oldMenu != menu){
-                        //change (different)
-                        //alert("Changing menu's.. (Was" + oldMenu + ", now is pressed "+ menu + ")");
-                        document.getElementById(oldMenu).style.display = "none";
-                        document.getElementById(menu).style.display = "block";
-                        document.getElementById('selected').innerHTML = "> " + menu;
-                        currCourse = document.getElementById('selected').innerHTML;
-                        oldMenu = menu;
-                        loadAch("instructions");
-                    }
-                    else{
-                        //pressed again
-                        //alert("Pressed again! (" + menu + " = " + oldMenu + "). Now Hiding.");
-                        
-                        document.getElementById(menu).style.display = "none";
-                        loadAch("instructions");
-                        isinstruct = 1;
-                        document.getElementById('selected').innerHTML = "" ;
-                        firstMenu = 0;
-                        oldMenu = "";
-                        menu = "";
-                        currCourse = "";
-                    }
-                }
-            }
-
-            function loadAch(ach){
-                
-                if(first==0){
-                    //first time
-                    if(ach != "instructions"){
-                    document.getElementById("instructions").style.display = "none";
-                    isinstruct=0;
-                    //alert("Pressed "+ach+" for the first time!");
-                    first=1;
-                    oldach = ach;
-                    document.getElementById(ach).style.display = "block";
-                    //alert("Selected is: "+ document.getElementById('selected').innerHTML);
-                    currCourse = document.getElementById('selected').innerHTML;
-                    document.getElementById('selected').innerHTML = currCourse + "> " + ach;
-                    }
-                    
-                }
-                else{
-                    if(oldach!=ach){
-                        //alert("Changing ach's.. (Was" + oldach + ", now is pressed "+ ach + ")");
-                        document.getElementById(oldach).style.display = "none";
-                        if(ach != "instructions")
-                        {
-                            document.getElementById(ach).style.display = "block";
-                            document.getElementById('selected').innerHTML = currCourse + "> " + ach;
-                            oldach = ach;
-                        }
-                        else
-                        {
-                            isinstruct = 1;
-                            document.getElementById(ach).style.display = "none";
-                            document.getElementById("instructions").style.display = "flex";
-                            document.getElementById('selected').innerHTML = "";
-                            first = 0;
-                            oldach = "";
-                            document.getElementById('selected').innerHTML = currCourse;
-                        }
-                    }
-                    else{
-                        //alert("Pressed again! (" + ach + " = " + oldach + "). Now Hiding.");
-                        document.getElementById(ach).style.display = "none";
-                        document.getElementById("instructions").style.display = "flex";
-                        document.getElementById('selected').innerHTML = "";
-                        first = 0;
-                        oldach = "";
-                        document.getElementById('selected').innerHTML = currCourse;
-                    }
-                }
-            }
-            </script>
+        
+        <script src="js_index_footer_loadPage.js"></script>
+        <script src="js_achievements.js"></script>
        </head>
     <body>
         <section class="s1">
@@ -168,8 +63,8 @@
                     <hr style="margin: 0px 0px 5px;">
                     <div class="current-page">
                         <div class="fas fa-cogs" >
-                            <a class="txt" onclick="loadAch('instructions')" style="font-family: Segoe UI;">> Achievements</a>
-                            <i><a id="selected" style="cursor: pointer;"></a></i>
+                            <a class="txt" onclick="loadPage('achievements.html')" style="font-family: Segoe UI;">> Achievements</a>
+                            <i id="navi"><a id="selected" onclick="hideSub()" style="cursor: pointer;"></a></i>
                         </div>
                     </div>
 

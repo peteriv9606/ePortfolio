@@ -667,8 +667,12 @@ div.socialIcons > a.fa {
         display: flex;
         justify-content: center;
         font-size: 18px;
-        margin: 1%;
+        margin: 0%;
         flex-wrap: wrap;
+    }
+
+    div.contactDetails > a{
+        margin: 1% 12%;
     }
 
     div.socialIcons {
@@ -801,4 +805,8 @@ div.socialIcons > a.fa {
     .main-window-wrapper{
         margin: 10% 0%;
     }
+    div.contactDetails > a{
+        margin: 1% 12%;
+    }
+    
 }
