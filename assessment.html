@@ -1,527 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
-        maximum-scale=1, minimum-scale=1">
-        <title>E-Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">        
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
-        <script src="js_index_footer_loadPage.js"></script>
-        <script src="js_assessment.js"></script>
-        
-       </head>
-    <body>
-        <section class="s1">
-            <div class="main-container">
-                <div class="main-window-wrapper">
-                    <div class="header-wrapper">
-                        <div class="current-window">
-                            <p class="fas fa-globe">
-                                <div class="window-icon-separator"></div>
-                                <p style="font-family: Segoe UI;">Welcome to my e-Portfolio</p>
-                            </p>
-                        </div>
-                        <div class="nav-icons">
-                            <div class="nav-mini">
-                                <div class="far fa-window-minimize"></div>
-                            </div>
-                            <div class="nav-maxi">
-                                <div class="far fa-square"></div>
-                            </div>
-                            <div class="nav-close">
-                                <div class="fa fa-close"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navigation">
-                        <button class="menubtn home"  type="button" onclick="loadPage('index.html')">Home</button>
-                        <button class="menubtn" type="button" onclick="loadPage('assessment.html')" style="border: 1px solid lightgray;">(LDE) Assessment</button>
-                        <div class="dropdown">
-                        <button class="menubtn" style="border: 1px solid lightgray;">
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="assessment.html?week1">(Week 1) - My digital Life</a>
-                            <a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a>
-                            <a href="assessment.html?week3">(Week 3) - Making my mark online</a>
-                            <a href="assessment.html?week4">(Week 4) - Staying safe online</a>
-                            <a href="assessment.html?week5">(Week 5) - Critical Consumption</a>
-                            <a href="assessment.html?week6">(Week 6) - The right tool for the right job</a>
-                            <a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a>
-                            <a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a>
-                        </div>
-                        </div>
-                        
-                        <button class="menubtn" type="button" onclick="loadPage('achievements.html')">Achievements</button>
-                        <button class="menubtn" type="button" onclick="loadPage('about.html')">About me</button>
-                        
-                    </div>
-                    <hr style="margin: 0px 0px 5px;">
-                    <div class="current-page">
-                        <div class="fas fa-cogs" >
-                            <a class="txt" onclick="loadPage('assessment.html')" style="font-family: Segoe UI;">> (LDE) Assessment</a>
-                            <i><a id="selected" style="cursor: pointer;"></a></i>
-                        </div>
-                    </div>
-
-                    <div class="window-content">
-                        <div class="left-side" id="left-side">
-                            <ul>
-                                <li><button type="button" onclick="loadWeek('week1')">(Week 1) - My digital Life</button></li>
-                                <li><button type="button" onclick="loadWeek('week2')">(Week 2) - Getting up and running (my digital environment)</button></li>
-                                <li><button type="button" onclick="loadWeek('week3')">(Week 3) - Making my mark online</button></li>
-                                <li><button type="button" onclick="loadWeek('week4')">(Week 4) - Staying safe online</button></li>
-                                <li><button type="button" onclick="loadWeek('week5')">(Week 5) - Critical Consumption</button></li>
-                                <li><button type="button" onclick="loadWeek('week6')">(Week 6) - The right tool for the right job</button></li>
-                                <li><button type="button" onclick="loadWeek('week7')">(Week 7) - Being Digital and making it work for me</button></li>
-                                <li><button type="button" onclick="loadWeek('week8')">(Week 8) - Continuing my digital journey</button></li>
-                            </ul>
-                        </div>
-                        <div class="right-side" id="right-side">
-                            <div class="instructions" id="instructions">
-                                <p style="text-indent: 25px;"> As part of my "Learning in the Digital Era" module, I was introduced to a previously uknown platform to me called <a href="https://www.open.edu/openlearn" style="color: dodgerblue;">OpenLearn</a>. In this platform, i was able to learn new and exciting features about the everyday use of technology, to which, quite frankly, I have never payed attention to before. I was assigned a "Digital Plan" - a document in which I can keep track of my progress, as well as my personal points of view, activities, applications and more. The "Digital Plan", as well as my own words aggregate towards the making of this assessment.
-                                    <br><br>
-                                    Total Word Count: <b>2224</b>.<br>
-                                    <i>Not including Tables (within weeks/quiz results), Introduction page (this one) and before/after quiz results information.</i>
-                                    <br><br>
-                                    <b><i style="text-align: center;">Please, use the buttons to view a certain week.</i></b>
-                                </p>
-                            </div>
-                            <div class="week one" id="week1">
-                                <div class="weekhead">My Digital Life</div>
-                                <div class="weeksubhead">Week 1</div>
-                                <hr>
-                                <p> This week I've thought about my use of technology and the kinds of things I tend to do at the moment. I've also been introduced to Manuela, Michael and John - my "companions" for this course, and I have found something in common between them and me: They all want to get up to date with technology, same as me. All of them are looking forward to “climbing up the ladder of success”, same as me. They want to learn more skills, same as I do. Using the activities in the platform, i have found that I am an "Appy and Adventurous" digital user, which means that I have embraced technology and social media and use it confidently in all sorts of everyday situations. I may sometimes need to be reminded that face-to-face communication is important too, which is quite true, given the fact that I tend to stay more in front of the screen than to pay attention to what is happening in front of me.</p>
-                                <p> One thing we all had to do, was to make a note of our starting point at the beginning of the week, and the most useful thing we’ve learned, one of which is the benefits of being able to use the internet, another one is to identify what the basic digital skills for everyday life are, and the most important one for me was how social networking can be useful to me. I also managed to identify one thing that I’d like to learn more about, and that was to use social media, as a tool to promote my own business, or work I provide. Even though i spend a lot of time online, I haven't had the opportunity to promote myself enough, and that reflects on my business opportunities, or moreover - the lack of them. Spending more time on this module, I took a chance and made a few more profiles in different work-related websites like LinkedIn, Indeed, Nextdoor - applications I have never used before. I wasn't sure about any of them, but in the end of the day, my work gave fruit - I found my first client!..when i think about it, she found me, using social media.</p>
-                                <p> In order to see what I have learned, I was advised to do an end-of-the week practice Quiz.</p>
-                                <br><br>
-                                <p class="results">This week's quiz results are in:</p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/15</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Monday, 12 Oct 2020, 14:47</td>
-                                        <td>12.87</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="week two" id="week2">
-                                <div class="weekhead">Getting up and running<br>(my digital environment)</div>
-                                <div class="weeksubhead">Week 2</div>
-                                <hr>
-                                
-                                <!--
-                                    <p> In the second week, I had to do several activities. <br>
-                                    <ul>
-                                        <li>
-                                            <p>Activity number one was to pick two online activities and provide details on what I was doing, why was I doing it, how it helped me and to discuss any issues that were raised.
-                                                As week 2 was very close to the date I arrived in the UK, I was quicly able to solve this one by using a table in the "Digital Plan", which you can see below:
-                                            </p>
-                                            <br>
-                                            <table class="weekActivity">
-                                                <tr class="weekRow">
-                                                    <th>What I did?</th>
-                                                    <th>Why I did it?</th>
-                                                    <th>How it helped?</th>
-                                                    <th>Issues raised</th>
-                                                  </tr>
-                                                  <tr class="weekRow">
-                                                    <td>Go online, and find a house to rent for me and my girflriend</td>
-                                                    <td>I had to provide a house in order to keep ourselves out of the cold. Also, I had to make sure we are going to be able to do our studies, as well as having access to commutes in close proximity</td>
-                                                    <td>I managed to find a nice house at a suitable price</td>
-                                                    <td>Compare prices and locations within all accommodation websites.</td>
-                                                </tr>
-                                                <tr class="weekRow">
-                                                    <td>Go online, and find the best suitable day and price for flight tickets provided by WizzAir</td>
-                                                    <td>There are lots of ways to travel from one place to another, but we discussed that the best possible way for both of us was to buy plane tickets and travel by plane</td>
-                                                    <td>We flew to the UK safe and sound</td>
-                                                    <td>Compare prices and available days for flights.</td> 
-                                                </tr>
-                                            </table> 
-                                        </li>
-                                       
-                                    </ul>
-
-                                -->
-                               
-                                <p>Week 2 has introduced me to the definition of digital skills and how it relates to digital literacy.  I never knew about the framework for digital skills, which divides the key skills needed to be effective online into 5 categories, or the "Jisc" framework (that has 6 categories). Interestingly enough, I learned what "Creative Commons" is, and how and when it is used, as i never thought that when people's creations, you have to give them the propper credit. I have also assessed how confident I am with a number of digital skills, using the activities in the OpenEdu Platform, and judging by the results, I can say, that I am very confident with using my digital skills, as to I did not find anything in particular that captured my interest more than the given information.</p>  
-                                <p>One of the activities I had to do in the "Digital Plan" was to choose one environment, and make a note of what skills I think I might need to do things effectively online. Presented by a table, here is what I chose:</p>
-                                <br>
-                                <table class="weekActivity">
-                                    <tr class="weekRow">
-                                        <th>At home I might need to know…</th>
-                                        <th>At work, I might need to know…</th>
-                                        <th>While I’m studying, I might need to know…</th>
-                                      </tr>
-                                      <tr class="weekRow">
-                                        <td>How to use social media to connect with friends and family.</td>
-                                        <td>Where to look for information and who to ask for assistance</td>
-                                        <td>Where I can find free resources – images, audio and video – that I can use legally for my studies, particularly within assignments and reports.</td>
-                                    </tr>
-                                </table> 
-                                <br>
-                                <br>
-                                <p class="results">This week's Practice Quiz results are in (somewhat great result):</p>
-                                <br>
-                                    <table class="results">
-                                        <tr style="background-color: whitesmoke;">
-                                            <th>Try</th>
-                                            <th>State</th>
-                                            <th>Grade/15</th>
-                                        </tr>
-                                        <tr style="background-color: lightgreen;">
-                                            <td>1</td>
-                                            <td>Finished<br>
-                                                Submitted Monday, 12 Oct 2020, 17:49</td>
-                                            <td>9</td>
-                                        </tr>
-                                    </table>
-                            </div>
-                            <div class="week three" id="week3">
-                                <div class="weekhead">Making my mark online</div>
-                                <div class="weeksubhead">Week 3</div>
-                                <hr>
-                                <p>This week, it's all about the "Digital Me". What is "Digital Footprint"? Is it good? Is it bad? I've learned, that this includes (and is not limited to) profiles such as Facebook and LinkedIn, Photographs of me or tagged photos (on Facebook) and basically, anything about me that is on the web - written, recorded, photographed, etc. I found out, that I am at a good starting point for my "digital footprint" by Googling my name, and only people with the same name as mine come up, but not me.</p>
-                                <p>One of the activities this week was to use the "Digital plan" to give myself advice on ways I can create a positive digital footprint and actions to take if I have a negative one:</p>
-                                <br>
-                                    <i>
-                                        <ul class="inWeekList">
-                                            <li>Search for your own name on the internet to see what comes up;</li>
-                                            <li>Be more cautious about what you are writing on social media;</li>
-                                            <li>Don’t put personal information online;</li>
-                                            <li>Be more cautious with linked websites (logging in other websites using your Facebook Account or Google account) as they might take more information than required;</li>
-                                            <li>Make sure everything you upload is shown to the right people, and not to those that do not need to see your information (Uploading photos that only Friends can see, Removing unnecessary information from LinkedIn, etc.)</li>
-                                            <li>If any, take down any photos that don't show you in the best light;</li>
-                                        </ul>
-                                    </i>
-                                <br>
-                                <p class="results">This week's Practice Quiz results are in:</p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/15</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Monday, 19 Oct 2020, 16:43</td>
-                                        <td>14.3</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="week four" id="week4">
-                                <div class="weekhead">Staying safe online</div>
-                                <div class="weeksubhead">Week 4</div>
-                                <hr>
-                                <p>In week 4 I was able to go more in-depth about online protecting myself, communication with others online, how to manage the time I spend online connected with other people, and the, interestingly new to me thing: Creative Commons licenses.</p>
-                                <p>E-Safety is one of the most important things when being online. There are many ways to protect ourselves while being online, but one of the things I found out for me, was that I was not using the "Two-Factor Authentication" while logging-in to my accounts.<br>
-                                The second thing I noted down in my "Digital Plan", regarding the techniques of making a strong password, or ways to improve my online security, was to use different passwords for different accounts in order to protect them.<br>
-                                If either account gets hacked or otherwise "burnt", other accounts are safe, because hackers cannot use that same cracked password for a different account, as they are secured with different passwords, or a combination of other password and the "Two-Factor Authentication" method for logging-in.</p> 
-                                <p>Apart from this, while I was watching a video on how to improve my digital well-being, I made some notes of tips that I wanted to try out. The tips i managed to write were:</p>
-                                <br>
-                                    <i>
-                                        <ul class="inWeekList">
-                                            <li>Unsubscribe from unwanted subscriptions;</li>
-                                            <li>Installing a calendar app or a to-do-list app, to keep track of everything (as i tend to forget things sometimes);</li>
-                                            <li>Purchase a Fitbit to keep me from standing still in one place for prolonged period of times (to remind myself to go and take a walk, or to go for a run from time to time, or if I have been in one place for a long time).</li>
-                                        </ul>
-                                    </i>
-                                <br>
-                                <p>A number of steps were taken since the beginning of the lessons I've learned about how to protect myself online, some of which are to use different passwords and to start to use the "Two-Factor Authentication" for logging-in to my accounts, as I have not used these two in the past recently. </p>
-                                <p class="results">
-                                    This week's "Compulsory Badge" Practice Quiz results are in:
-                                </p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/45</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Saturday, 24 Oct 2020, 14:33</td>
-                                        <td>39.72</td>
-                                    </tr>
-                                </table>
-                                <br>
-                                <i> 
-                                    <p>As usual, this week I had one more quiz, but this time, the quiz was a "Compulsory Badge" quiz, that counts towards my badge*. There is a second one at <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w8')">Week 8</a>, and for both, I must obtain a score of at least 50% to qualify for the badge.</p>
-                                    <p>*Final score and result can be found in <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w8')">(Week 8)</a></p>
-                                </i>
-                            </div>
-                            <div class="week five" id="week5">
-                                <div class="weekhead">Critical Consumption</div>
-                                <div class="weeksubhead">Week 5</div>
-                                <hr>
-                                <p>Week 5 gave me the opportunity to gain the ability to think critically. This includes, but is not limited to:</p>
-                                <br>
-                                    <i> 
-                                        <ul class="inWeekList">
-                                            <li>The ability to search effectively by filtering, scamming and skimming through pages to find information more quickly;</li>
-                                            <li>Asking the right questions of online sources and setting the criteria to judge who and what can be trusted online using the CAN and PROMPT evaluation criterias;</li>
-                                            <li>The ability to deal with "information overload" and to set the right starting points when searching for information online. </li>
-                                        </ul>
-                                    </i>
-                                <br>
-                                <p>To answer the question "How do I decide what to trust online?", I can safely say that my information sources are narrowed down to no more than five to ten websites. For example, if I want to find some information for a program or a website I'm currently having issues with, I would refer to StackOverflow or to W3Schools for answers. If I'm asked to do a report, I would refer to the (online) school library, <a href="http://www.investopedia.com" style="color:#135db1; font-style: italic;">www.investopedia.com</a>, <a href="http://www.researchgate.net" style="color:#135db1; font-style: italic;">www.researchgate.net</a> or <a href="http://www.academia.edu" style="color:#135db1; font-style: italic;">www.academia.edu</a>.</p>
-                                <p>This week, I found out about the CAN and PROMPT criterias for evaluating information online. "CAN" - Can I trust this information? What Credibility, Agenda and Needs does it have? "PROMPT" - The Presentation, Relevance, Objectivity, Method, Provenence and Timeliness of the information. Unconsciously, I asked myself these questions while I was doing my own researches, and I'm safe to say that I managed to destinguish the rather "wrongful" information from the one I need.</p>
-                                <p>I also learned what "Information Landscape" is, and that helped me with managing my activities for this week, as well as allowing me to see the key features of my own information landscape.</p>
-                                <p>Comparing "Now" and "Six months ago", I can surely say that there is no significant difference between my sources of information. For example, if I were to find some resources about <i>Self-Development (Me)</i>, <i>My Local Comunity</i>, <i>College/University/Workplace</i> or my <i>My World View</i>, my research would vary between <i>Ideas and oppinions</i>, <i>Experience</i>, <i>News (Local/Global)</i>, <i>Historical information</i>, <i>Facts and Figures</i> as well as conducting my own <i>Research</i> online.
-                                </p>
-                                <br>
-                                    
-                                <p>As usual, this week ends with a quiz. This week's quiz is regular, like 1st, 2nd, 3rd and 4th week quizes.</p>
-                                <p class="results">
-                                    This week's Practice Quiz results are in:
-                                </p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/15</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Monday, 26 Oct 2020, 17:37</td>
-                                        <td>15</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="week six" id="week6">
-                                <div class="weekhead">The right tool for the right job</div>
-                                <div class="weeksubhead">Week 6</div>
-                                <hr>
-                                <p>Loads and Loads of Apps, but which one do I need?<br>This week, I've learned how to search for and evaluate apps and online tools, using a framework. I've learned that I should use my critical thinking in order to select the most appropriate app or tool, whether for work, studies or at home.</p>
-                                <p>Knowing all that, I was asked to describe what applications and tools I use regularly to manage my activities. Refer to the table below:</p>
-                                <br>
-                                <table class="weekActivity">
-                                    <tr class="weekRow">
-                                        <th>Activity</th>
-                                        <th>App/Device</th>
-                                        <th>Work/study/daily life (all that apply)</th>
-                                        <th>Frequency</th>
-                                        <th>Likes/Dislikes</th>
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Managing Money</b></td>
-                                        <td>Banking App/Phone,Laptop</td>
-                                        <td>Work/Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: Detailed Statistics and Reports, 24/7 Online Service;<br>Dislike: none;</td>
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Leisure: music, video, games</b></td>
-                                        <td>YouTube, Spotify/Phone,Laptop, PS4</td>
-                                        <td>Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: I get to listen and see (YouTube) my favourite songs and artist;<br>Dislike: Ads (unless i pay);</td>
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Saving documents/tracking references</b></td>
-                                        <td>In-App storage and/or Cloud Services/Laptop, Phone</td>
-                                        <td>Study, Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: Safely kept online or on my phone/laptop;<br>Dislike: Information leakage possibility;</td> 
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Accessing News</b></td>
-                                        <td>YouTube, Facebook/ Phone</td>
-                                        <td>Work, Study, Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: I get to see Live news from Facebook on different toppics;<br>Dislike: I don't usually watch news (not interested);</td> 
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Communicating and collaborating</b></td>
-                                        <td>Messenger, Viber, WhatsApp, Discord/ Phone, Laptop</td>
-                                        <td>Work, Study, Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: Chat history and file-sharing history is kept safe online;<br>Dislike: Information leakage possibility;</td> 
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Organising things</b></td>
-                                        <td>Notes/ Phone, Laptop</td>
-                                        <td>Work, Study, Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: Everything I need to remind me of something is either in my pocket or in front of me ;<br>Dislike: None;</td> 
-                                    </tr>
-                                    <tr class="weekRow">
-                                        <td><b>Managing photos</b></td>
-                                        <td>Built-in Gallery app/ Phone, Laptop</td>
-                                        <td>Work, Study, Daily Life</td>
-                                        <td>Daily</td>
-                                        <td>Like: Easily accessible;<br>Dislike: Takes too much space on phone to keep all the photos;</td> 
-                                    </tr>
-                                </table> 
-                                <p>I also had to pick three apps/tools and do a Critical Evaluation of them by using the ACCEPTS mnemonic criteria. The apps I chose were Facebook, Messenger and Google Photos. I managed to evaluate the apps using the "Digital Plan" by answering the Access, Collaboration, Cost, Ease of use, Purpose, Trust and Shelf-life questions for each app.<br>
-                                Using the ACCEPTS criteria, I found that I can evaluate more than these three apps and see if I can trust the app I'm assigned to use, or I want to use for my personal preference. 
-                            </p>
-                            <p class="results">
-                                This week's Practice Quiz results are in:
-                            </p>
-                            <br>
-                            <table class="results">
-                                <tr style="background-color: whitesmoke;">
-                                    <th>Try</th>
-                                    <th>State</th>
-                                    <th>Grade/15</th>
-                                </tr>
-                                <tr style="background-color: lightgreen;">
-                                    <td>1</td>
-                                    <td>Finished<br>
-                                        Submitted Monday, 26 Oct 2020, 18:11</td>
-                                    <td>15</td>
-                                </tr>
-                            </table>
-                            </div>
-                            <div class="week seven" id="week7">
-                                <div class="weekhead">Being Digital and making it work for me</div>
-                                <div class="weeksubhead">Week 7</div>
-                                <hr>
-                                <p>Week 7 was, overall, a recap on what we have done so far. I was asked to assist my "companions" - Manuela, John and Michael with their online presentation by doing a critical evaluation of the information I could find online for them. Also, we wanted to make sure they leave a positive footprint online, so that way they can look as professional as possible for their future carreers and endeavours. Doing all that, I wanted to make sure they stayed safe online, and I reminded them of the ACCEPTS evaluation criteria if they are offered some apps or tools to use online, as well as the CAN and PROMPT criterias for trusting information online, while conducting their own research.</p>
-                                <ul class="inWeekList">
-                                    <li>I helped Manuela by assisting her with finding the right information on the internet. She was doing some online research into Formula One careers and I advised her on how to narrow her search results and what key words she can use to find exactly what she is looking for.<br>
-                                    My advice for her was to google "Formula One, Marketing Carreer, UK" to find the best possible results for her.</li>
-                                    <li>On the other hand, John wanted to make a professional impact on LinkedIn, and I advised him to upload an updated version of his Portfolio, CV and a Professional Photo of himself;</li>
-                                    <li>Michael wanted to find free courses and resources that could help him to progress in his career as a trainer and by applying a critical evaluation to the information found online, I managed to find some free resources for him to look up.</li>
-                                </ul>
-                                <p class="results">
-                                    This week's Practice Quiz results are in:
-                                </p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/15</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Monday, 2 Nov 2020, 16:39</td>
-                                        <td>13</td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="week eight" id="week8">
-                                <div class="weekhead">Continuing my digital journey</div>
-                                <div class="weeksubhead">Week 8</div>
-                                <hr>
-                                <p>As this is the final week of my course "Succeeding in a digital world", I went through the weeks and activities I had done previously, and by doing that:</p>
-                                <ul class="inWeekList">
-                                    <li>I've expanded my way on how to Critically Evaluate information I find online;</li>
-                                    <li>I've learned what questions to ask if I'm not sure about the information I have found online (whether or not to trust it);</li>
-                                    <li>I now know what Creative Commons is, how it works, and how to give credit to the creator by using their work to enhance my own creations;</li>
-                                    <li>I took some steps along the way to enhance my digital profile by dong some background checks of my digital footprint, revisiting my long forgotten accounts across various websites, updated my information by removing unnecessary things or adding something new. I've also created a few new accounts needed for my carreer progression (LinkedIn).</li>
-                                </ul>
-                                <p>Going through the course summary I was thinking that all information gathered is important, not only because information is one of the most powerful tools worldwide, but because it teaches us to be, want and do “more”.</p><br>
-                                <p>In particular:
-                                    <ul class="inWeekList">
-                                        <li>My “home” skills (this year - merged with my School Skills due to "COVID-19") have helped me throughout the course in finding information about my assessments, more details about my modules which I haven’t found before, even though it is there, and most importantly - I have made new friends by using social platforms I have never used before (MS Teams, WhatsApp).</li>
-                                        <li>In work aspect, my skills have helped me along the way of finding a suitable job for me, and not falling into any scams.</li>
-                                    </ul>
-                                </p>
-                                <br>
-                                <p>I was planning on making my very own digital E-Portfolio website for a long time now, because I know how important it is to be able to represent yourself. This module gave me the opportunity and the confidence to do this. As far as "Continuing my Digital Journey", I plan to keep updating this website throughout my studies, so I can showcase my work and achievements, because in the future, this website can help me find a possible career opportunity.</p>
-                            
-                                <p class="results">
-                                    This week's "Compulsory Badge" Practice Quiz results are in:
-                                </p>
-                                <br>
-                                <table class="results">
-                                    <tr style="background-color: whitesmoke;">
-                                        <th>Try</th>
-                                        <th>State</th>
-                                        <th>Grade/45</th>
-                                    </tr>
-                                    <tr style="background-color: lightgreen;">
-                                        <td>1</td>
-                                        <td>Finished<br>
-                                            Submitted Monday, 2 Nov 2020, 18:24</td>
-                                        <td>42.67</td>
-                                    </tr>
-                                </table>
-                                <br>
-                                <p>As mentioned earlier <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w4')">(Week 4)</a>, by scoring above 50% on both quizes, I get a <a href="achievements.html?cb" style="cursor:pointer; color:#135db1;font-style: italic;">"Compulsory Badge"</a>, which you can see in the <a href="achievements.html" style="cursor:pointer; color:#135db1;font-style: italic;">Achievements</a> section, alongside with my <a href="achievements.html?microsoft" style="cursor:pointer; color:#135db1;font-style: italic;">"Microsoft Digital Literacy Course"</a> certificates</p>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="s2">
-            <div class="footer">
-                <div class="sitemap">
-                    <h3>Sitemap</h3>
-                    <ul class="footerList"> 
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="assessment.html">Assessment</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAssessment')">+/-</button></li>
-                        <ul class="footerListSub" id="subListAssessment">
-                            <li><a href="assessment.html?week1">(Week 1) - My digital Life</a></li>
-                            <li><a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a></li>
-                            <li><a href="assessment.html?week3">(Week 3) - Making my mark online</a></li>
-                            <li><a href="assessment.html?week4">(Week 4) - Staying safe online</a></li>
-                            <li><a href="assessment.html?week5">(Week 5) - Critical Consumption</a></li>
-                            <li><a href="assessment.html?week6">(Week 6) - The right tool for the right job</a></li>
-                            <li><a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a></li>
-                            <li><a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a></li>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1,
+         maximum-scale=1, minimum-scale=1">
+      <title>E-Portfolio</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
+      <script src="js_index_footer_loadPage.js"></script>
+      <script src="js_assessment.js"></script>
+   </head>
+   <body>
+      <section class="s1">
+         <div class="main-container">
+            <div class="main-window-wrapper">
+               <div class="header-wrapper">
+                  <div class="current-window">
+                     <p class="fas fa-globe">
+                     <div class="window-icon-separator"></div>
+                     <p style="font-family: Segoe UI;">Welcome to my e-Portfolio</p>
+                     </p>
+                  </div>
+                  <div class="nav-icons">
+                     <div class="nav-mini">
+                        <div class="far fa-window-minimize"></div>
+                     </div>
+                     <div class="nav-maxi">
+                        <div class="far fa-square"></div>
+                     </div>
+                     <div class="nav-close">
+                        <div class="fa fa-close"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="navigation">
+                  <button class="menubtn home"  type="button" onclick="loadPage('index.html')">Home</button>
+                  <button class="menubtn" type="button" onclick="loadPage('assessment.html')" style="border: 1px solid lightgray;">(LDE) Assessment</button>
+                  <div class="dropdown">
+                     <button class="menubtn" style="border: 1px solid lightgray;">
+                     <i class="fa fa-caret-down"></i>
+                     </button>
+                     <div class="dropdown-content">
+                        <a href="assessment.html?week1">(Week 1) - My digital Life</a>
+                        <a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a>
+                        <a href="assessment.html?week3">(Week 3) - Making my mark online</a>
+                        <a href="assessment.html?week4">(Week 4) - Staying safe online</a>
+                        <a href="assessment.html?week5">(Week 5) - Critical Consumption</a>
+                        <a href="assessment.html?week6">(Week 6) - The right tool for the right job</a>
+                        <a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a>
+                        <a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a>
+                     </div>
+                  </div>
+                  <button class="menubtn" type="button" onclick="loadPage('achievements.html')">Achievements</button>
+                  <button class="menubtn" type="button" onclick="loadPage('about.html')">About me</button>
+               </div>
+               <hr style="margin: 0px 0px 5px;">
+               <div class="current-page">
+                  <div class="fas fa-cogs" >
+                     <a class="txt" onclick="loadPage('assessment.html')" style="font-family: Segoe UI;">> (LDE) Assessment</a>
+                     <i><a id="selected" style="cursor: pointer;"></a></i>
+                  </div>
+               </div>
+               <div class="window-content">
+                  <div class="left-side" id="left-side">
+                     <ul>
+                        <li><button type="button" onclick="loadWeek('week1')">(Week 1) - My digital Life</button></li>
+                        <li><button type="button" onclick="loadWeek('week2')">(Week 2) - Getting up and running (my digital environment)</button></li>
+                        <li><button type="button" onclick="loadWeek('week3')">(Week 3) - Making my mark online</button></li>
+                        <li><button type="button" onclick="loadWeek('week4')">(Week 4) - Staying safe online</button></li>
+                        <li><button type="button" onclick="loadWeek('week5')">(Week 5) - Critical Consumption</button></li>
+                        <li><button type="button" onclick="loadWeek('week6')">(Week 6) - The right tool for the right job</button></li>
+                        <li><button type="button" onclick="loadWeek('week7')">(Week 7) - Being Digital and making it work for me</button></li>
+                        <li><button type="button" onclick="loadWeek('week8')">(Week 8) - Continuing my digital journey</button></li>
+                     </ul>
+                  </div>
+                  <div class="right-side" id="right-side">
+                     <div class="instructions" id="instructions">
+                        <p style="text-indent: 25px;"> As part of my "Learning in the Digital Era" module, I was introduced to a previously uknown platform to me called <a href="https://www.open.edu/openlearn" style="color: dodgerblue;">OpenLearn</a>. In this platform, i was able to learn new and exciting features about the everyday use of technology, to which, quite frankly, I have never payed attention to before. I was assigned a "Digital Plan" - a document in which I can keep track of my progress, as well as my personal points of view, activities, applications and more. The "Digital Plan", as well as my own words aggregate towards the making of this assessment.
+                           <br><br>
+                           Total Word Count: <b>2224</b>.<br>
+                           <i>Not including Tables (within weeks/quiz results), Introduction page (this one) and before/after quiz results information.</i>
+                           <br><br>
+                           <b><i style="text-align: center;">Please, use the buttons to view a certain week.</i></b>
+                        </p>
+                     </div>
+                     <div class="week one" id="week1">
+                        <div class="weekhead">My Digital Life</div>
+                        <div class="weeksubhead">Week 1</div>
+                        <hr>
+                        <p> This week I've thought about my use of technology and the kinds of things I tend to do at the moment. I've also been introduced to Manuela, Michael and John - my "companions" for this course, and I have found something in common between them and me: They all want to get up to date with technology, same as me. All of them are looking forward to “climbing up the ladder of success”, same as me. They want to learn more skills, same as I do. Using the activities in the platform, i have found that I am an "Appy and Adventurous" digital user, which means that I have embraced technology and social media and use it confidently in all sorts of everyday situations. I may sometimes need to be reminded that face-to-face communication is important too, which is quite true, given the fact that I tend to stay more in front of the screen than to pay attention to what is happening in front of me.</p>
+                        <p> One thing we all had to do, was to make a note of our starting point at the beginning of the week, and the most useful thing we’ve learned, one of which is the benefits of being able to use the internet, another one is to identify what the basic digital skills for everyday life are, and the most important one for me was how social networking can be useful to me. I also managed to identify one thing that I’d like to learn more about, and that was to use social media, as a tool to promote my own business, or work I provide. Even though i spend a lot of time online, I haven't had the opportunity to promote myself enough, and that reflects on my business opportunities, or moreover - the lack of them. Spending more time on this module, I took a chance and made a few more profiles in different work-related websites like LinkedIn, Indeed, Nextdoor - applications I have never used before. I wasn't sure about any of them, but in the end of the day, my work gave fruit - I found my first client!..when i think about it, she found me, using social media.</p>
+                        <p> In order to see what I have learned, I was advised to do an end-of-the week practice Quiz.</p>
+                        <br><br>
+                        <p class="results">This week's quiz results are in:</p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 12 Oct 2020, 14:47
+                              </td>
+                              <td>12.87</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week two" id="week2">
+                        <div class="weekhead">Getting up and running<br>(my digital environment)</div>
+                        <div class="weeksubhead">Week 2</div>
+                        <hr>
+                        <!--
+                           <p> In the second week, I had to do several activities. <br>
+                           <ul>
+                               <li>
+                                   <p>Activity number one was to pick two online activities and provide details on what I was doing, why was I doing it, how it helped me and to discuss any issues that were raised.
+                                       As week 2 was very close to the date I arrived in the UK, I was quicly able to solve this one by using a table in the "Digital Plan", which you can see below:
+                                   </p>
+                                   <br>
+                                   <table class="weekActivity">
+                                       <tr class="weekRow">
+                                           <th>What I did?</th>
+                                           <th>Why I did it?</th>
+                                           <th>How it helped?</th>
+                                           <th>Issues raised</th>
+                                         </tr>
+                                         <tr class="weekRow">
+                                           <td>Go online, and find a house to rent for me and my girflriend</td>
+                                           <td>I had to provide a house in order to keep ourselves out of the cold. Also, I had to make sure we are going to be able to do our studies, as well as having access to commutes in close proximity</td>
+                                           <td>I managed to find a nice house at a suitable price</td>
+                                           <td>Compare prices and locations within all accommodation websites.</td>
+                                       </tr>
+                                       <tr class="weekRow">
+                                           <td>Go online, and find the best suitable day and price for flight tickets provided by WizzAir</td>
+                                           <td>There are lots of ways to travel from one place to another, but we discussed that the best possible way for both of us was to buy plane tickets and travel by plane</td>
+                                           <td>We flew to the UK safe and sound</td>
+                                           <td>Compare prices and available days for flights.</td> 
+                                       </tr>
+                                   </table> 
+                               </li>
+                              
+                           </ul>
+                           
+                           -->
+                        <p>Week 2 has introduced me to the definition of digital skills and how it relates to digital literacy.  I never knew about the framework for digital skills, which divides the key skills needed to be effective online into 5 categories, or the "Jisc" framework (that has 6 categories). Interestingly enough, I learned what "Creative Commons" is, and how and when it is used, as i never thought that when people's creations, you have to give them the propper credit. I have also assessed how confident I am with a number of digital skills, using the activities in the OpenEdu Platform, and judging by the results, I can say, that I am very confident with using my digital skills, as to I did not find anything in particular that captured my interest more than the given information.</p>
+                        <p>One of the activities I had to do in the "Digital Plan" was to choose one environment, and make a note of what skills I think I might need to do things effectively online. Presented by a table, here is what I chose:</p>
+                        <br>
+                        <table class="weekActivity">
+                           <tr class="weekRow">
+                              <th>At home I might need to know…</th>
+                              <th>At work, I might need to know…</th>
+                              <th>While I’m studying, I might need to know…</th>
+                           </tr>
+                           <tr class="weekRow">
+                              <td>How to use social media to connect with friends and family.</td>
+                              <td>Where to look for information and who to ask for assistance</td>
+                              <td>Where I can find free resources – images, audio and video – that I can use legally for my studies, particularly within assignments and reports.</td>
+                           </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <p class="results">This week's Practice Quiz results are in (somewhat great result):</p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 12 Oct 2020, 17:49
+                              </td>
+                              <td>9</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week three" id="week3">
+                        <div class="weekhead">Making my mark online</div>
+                        <div class="weeksubhead">Week 3</div>
+                        <hr>
+                        <p>This week, it's all about the "Digital Me". What is "Digital Footprint"? Is it good? Is it bad? I've learned, that this includes (and is not limited to) profiles such as Facebook and LinkedIn, Photographs of me or tagged photos (on Facebook) and basically, anything about me that is on the web - written, recorded, photographed, etc. I found out, that I am at a good starting point for my "digital footprint" by Googling my name, and only people with the same name as mine come up, but not me.</p>
+                        <p>One of the activities this week was to use the "Digital plan" to give myself advice on ways I can create a positive digital footprint and actions to take if I have a negative one:</p>
+                        <br>
+                        <i>
+                           <ul class="inWeekList">
+                              <li>Search for your own name on the internet to see what comes up;</li>
+                              <li>Be more cautious about what you are writing on social media;</li>
+                              <li>Don’t put personal information online;</li>
+                              <li>Be more cautious with linked websites (logging in other websites using your Facebook Account or Google account) as they might take more information than required;</li>
+                              <li>Make sure everything you upload is shown to the right people, and not to those that do not need to see your information (Uploading photos that only Friends can see, Removing unnecessary information from LinkedIn, etc.)</li>
+                              <li>If any, take down any photos that don't show you in the best light;</li>
+                           </ul>
+                        </i>
+                        <br>
+                        <p class="results">This week's Practice Quiz results are in:</p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 19 Oct 2020, 16:43
+                              </td>
+                              <td>14.3</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week four" id="week4">
+                        <div class="weekhead">Staying safe online</div>
+                        <div class="weeksubhead">Week 4</div>
+                        <hr>
+                        <p>In week 4 I was able to go more in-depth about online protecting myself, communication with others online, how to manage the time I spend online connected with other people, and the, interestingly new to me thing: Creative Commons licenses.</p>
+                        <p>E-Safety is one of the most important things when being online. There are many ways to protect ourselves while being online, but one of the things I found out for me, was that I was not using the "Two-Factor Authentication" while logging-in to my accounts.<br>
+                           The second thing I noted down in my "Digital Plan", regarding the techniques of making a strong password, or ways to improve my online security, was to use different passwords for different accounts in order to protect them.<br>
+                           If either account gets hacked or otherwise "burnt", other accounts are safe, because hackers cannot use that same cracked password for a different account, as they are secured with different passwords, or a combination of other password and the "Two-Factor Authentication" method for logging-in.
+                        </p>
+                        <p>Apart from this, while I was watching a video on how to improve my digital well-being, I made some notes of tips that I wanted to try out. The tips i managed to write were:</p>
+                        <br>
+                        <i>
+                           <ul class="inWeekList">
+                              <li>Unsubscribe from unwanted subscriptions;</li>
+                              <li>Installing a calendar app or a to-do-list app, to keep track of everything (as i tend to forget things sometimes);</li>
+                              <li>Purchase a Fitbit to keep me from standing still in one place for prolonged period of times (to remind myself to go and take a walk, or to go for a run from time to time, or if I have been in one place for a long time).</li>
+                           </ul>
+                        </i>
+                        <br>
+                        <p>A number of steps were taken since the beginning of the lessons I've learned about how to protect myself online, some of which are to use different passwords and to start to use the "Two-Factor Authentication" for logging-in to my accounts, as I have not used these two in the past recently. </p>
+                        <p class="results">
+                           This week's "Compulsory Badge" Practice Quiz results are in:
+                        </p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/45</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Saturday, 24 Oct 2020, 14:33
+                              </td>
+                              <td>39.72</td>
+                           </tr>
+                        </table>
+                        <br>
+                        <i>
+                           <p>As usual, this week I had one more quiz, but this time, the quiz was a "Compulsory Badge" quiz, that counts towards my badge*. There is a second one at <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w8')">Week 8</a>, and for both, I must obtain a score of at least 50% to qualify for the badge.</p>
+                           <p>*Final score and result can be found in <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w8')">(Week 8)</a></p>
+                        </i>
+                     </div>
+                     <div class="week five" id="week5">
+                        <div class="weekhead">Critical Consumption</div>
+                        <div class="weeksubhead">Week 5</div>
+                        <hr>
+                        <p>Week 5 gave me the opportunity to gain the ability to think critically. This includes, but is not limited to:</p>
+                        <br>
+                        <i>
+                           <ul class="inWeekList">
+                              <li>The ability to search effectively by filtering, scamming and skimming through pages to find information more quickly;</li>
+                              <li>Asking the right questions of online sources and setting the criteria to judge who and what can be trusted online using the CAN and PROMPT evaluation criterias;</li>
+                              <li>The ability to deal with "information overload" and to set the right starting points when searching for information online. </li>
+                           </ul>
+                        </i>
+                        <br>
+                        <p>To answer the question "How do I decide what to trust online?", I can safely say that my information sources are narrowed down to no more than five to ten websites. For example, if I want to find some information for a program or a website I'm currently having issues with, I would refer to StackOverflow or to W3Schools for answers. If I'm asked to do a report, I would refer to the (online) school library, <a href="http://www.investopedia.com" style="color:#135db1; font-style: italic;">www.investopedia.com</a>, <a href="http://www.researchgate.net" style="color:#135db1; font-style: italic;">www.researchgate.net</a> or <a href="http://www.academia.edu" style="color:#135db1; font-style: italic;">www.academia.edu</a>.</p>
+                        <p>This week, I found out about the CAN and PROMPT criterias for evaluating information online. "CAN" - Can I trust this information? What Credibility, Agenda and Needs does it have? "PROMPT" - The Presentation, Relevance, Objectivity, Method, Provenence and Timeliness of the information. Unconsciously, I asked myself these questions while I was doing my own researches, and I'm safe to say that I managed to destinguish the rather "wrongful" information from the one I need.</p>
+                        <p>I also learned what "Information Landscape" is, and that helped me with managing my activities for this week, as well as allowing me to see the key features of my own information landscape.</p>
+                        <p>Comparing "Now" and "Six months ago", I can surely say that there is no significant difference between my sources of information. For example, if I were to find some resources about <i>Self-Development (Me)</i>, <i>My Local Comunity</i>, <i>College/University/Workplace</i> or my <i>My World View</i>, my research would vary between <i>Ideas and oppinions</i>, <i>Experience</i>, <i>News (Local/Global)</i>, <i>Historical information</i>, <i>Facts and Figures</i> as well as conducting my own <i>Research</i> online.
+                        </p>
+                        <br>
+                        <p>As usual, this week ends with a quiz. This week's quiz is regular, like 1st, 2nd, 3rd and 4th week quizes.</p>
+                        <p class="results">
+                           This week's Practice Quiz results are in:
+                        </p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 26 Oct 2020, 17:37
+                              </td>
+                              <td>15</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week six" id="week6">
+                        <div class="weekhead">The right tool for the right job</div>
+                        <div class="weeksubhead">Week 6</div>
+                        <hr>
+                        <p>Loads and Loads of Apps, but which one do I need?<br>This week, I've learned how to search for and evaluate apps and online tools, using a framework. I've learned that I should use my critical thinking in order to select the most appropriate app or tool, whether for work, studies or at home.</p>
+                        <p>Knowing all that, I was asked to describe what applications and tools I use regularly to manage my activities. Refer to the table below:</p>
+                        <br>
+                        <table class="weekActivity">
+                           <tr class="weekRow">
+                              <th>Activity</th>
+                              <th>App/Device</th>
+                              <th>Work/study/daily life (all that apply)</th>
+                              <th>Frequency</th>
+                              <th>Likes/Dislikes</th>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Managing Money</b></td>
+                              <td>Banking App/Phone,Laptop</td>
+                              <td>Work/Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: Detailed Statistics and Reports, 24/7 Online Service;<br>Dislike: none;</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Leisure: music, video, games</b></td>
+                              <td>YouTube, Spotify/Phone,Laptop, PS4</td>
+                              <td>Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: I get to listen and see (YouTube) my favourite songs and artist;<br>Dislike: Ads (unless i pay);</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Saving documents/tracking references</b></td>
+                              <td>In-App storage and/or Cloud Services/Laptop, Phone</td>
+                              <td>Study, Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: Safely kept online or on my phone/laptop;<br>Dislike: Information leakage possibility;</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Accessing News</b></td>
+                              <td>YouTube, Facebook/ Phone</td>
+                              <td>Work, Study, Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: I get to see Live news from Facebook on different toppics;<br>Dislike: I don't usually watch news (not interested);</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Communicating and collaborating</b></td>
+                              <td>Messenger, Viber, WhatsApp, Discord/ Phone, Laptop</td>
+                              <td>Work, Study, Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: Chat history and file-sharing history is kept safe online;<br>Dislike: Information leakage possibility;</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Organising things</b></td>
+                              <td>Notes/ Phone, Laptop</td>
+                              <td>Work, Study, Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: Everything I need to remind me of something is either in my pocket or in front of me ;<br>Dislike: None;</td>
+                           </tr>
+                           <tr class="weekRow">
+                              <td><b>Managing photos</b></td>
+                              <td>Built-in Gallery app/ Phone, Laptop</td>
+                              <td>Work, Study, Daily Life</td>
+                              <td>Daily</td>
+                              <td>Like: Easily accessible;<br>Dislike: Takes too much space on phone to keep all the photos;</td>
+                           </tr>
+                        </table>
+                        <p>I also had to pick three apps/tools and do a Critical Evaluation of them by using the ACCEPTS mnemonic criteria. The apps I chose were Facebook, Messenger and Google Photos. I managed to evaluate the apps using the "Digital Plan" by answering the Access, Collaboration, Cost, Ease of use, Purpose, Trust and Shelf-life questions for each app.<br>
+                           Using the ACCEPTS criteria, I found that I can evaluate more than these three apps and see if I can trust the app I'm assigned to use, or I want to use for my personal preference. 
+                        </p>
+                        <p class="results">
+                           This week's Practice Quiz results are in:
+                        </p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 26 Oct 2020, 18:11
+                              </td>
+                              <td>15</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week seven" id="week7">
+                        <div class="weekhead">Being Digital and making it work for me</div>
+                        <div class="weeksubhead">Week 7</div>
+                        <hr>
+                        <p>Week 7 was, overall, a recap on what we have done so far. I was asked to assist my "companions" - Manuela, John and Michael with their online presentation by doing a critical evaluation of the information I could find online for them. Also, we wanted to make sure they leave a positive footprint online, so that way they can look as professional as possible for their future carreers and endeavours. Doing all that, I wanted to make sure they stayed safe online, and I reminded them of the ACCEPTS evaluation criteria if they are offered some apps or tools to use online, as well as the CAN and PROMPT criterias for trusting information online, while conducting their own research.</p>
+                        <ul class="inWeekList">
+                           <li>I helped Manuela by assisting her with finding the right information on the internet. She was doing some online research into Formula One careers and I advised her on how to narrow her search results and what key words she can use to find exactly what she is looking for.<br>
+                              My advice for her was to google "Formula One, Marketing Carreer, UK" to find the best possible results for her.
+                           </li>
+                           <li>On the other hand, John wanted to make a professional impact on LinkedIn, and I advised him to upload an updated version of his Portfolio, CV and a Professional Photo of himself;</li>
+                           <li>Michael wanted to find free courses and resources that could help him to progress in his career as a trainer and by applying a critical evaluation to the information found online, I managed to find some free resources for him to look up.</li>
                         </ul>
-                    <li><a href="achievements.html">Achievements</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAchievements')">+/-</button></li>
-                        <ul class="footerListSub" style="border: none;" id="subListAchievements">
-                            <li>Microsoft <button type="button" class="expandBtn" onclick="expandFooter('subListMicrosoft')">+/-</button></li>
-                            <ul class="footerListSub" id="subListMicrosoft">
-                                <li><a href="achievements.html?WWC">Work With Computers</a></li>
-                                <li><a href="achievements.html?AIO">Access information online</a></li>
-                                <li><a href="achievements.html?CO">Communicate online</a></li>
-                                <li><a href="achievements.html?PSARO">Participate safely and responsibly online</a></li>
-                                <li><a href="achievements.html?CDC">Create digital content</a></li>
-                                <li><a href="achievements.html?CAMCD">Collaborate and manage content digitally</a></li>
-                            </ul>
-                            <li>OpenLearn <button type="button" class="expandBtn" onclick="expandFooter('subListOpenLearn')">+/-</button></li>
-                            <ul class="footerListSub" id="subListOpenLearn">
-                                <li><a href="achievements.html?cb">Compulsory Badge</a></li>
-                                <li><a href="achievements.html?sop">Statement of Participation</a></li>
-                            </ul>
+                        <p class="results">
+                           This week's Practice Quiz results are in:
+                        </p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/15</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 2 Nov 2020, 16:39
+                              </td>
+                              <td>13</td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="week eight" id="week8">
+                        <div class="weekhead">Continuing my digital journey</div>
+                        <div class="weeksubhead">Week 8</div>
+                        <hr>
+                        <p>As this is the final week of my course "Succeeding in a digital world", I went through the weeks and activities I had done previously, and by doing that:</p>
+                        <ul class="inWeekList">
+                           <li>I've expanded my way on how to Critically Evaluate information I find online;</li>
+                           <li>I've learned what questions to ask if I'm not sure about the information I have found online (whether or not to trust it);</li>
+                           <li>I now know what Creative Commons is, how it works, and how to give credit to the creator by using their work to enhance my own creations;</li>
+                           <li>I took some steps along the way to enhance my digital profile by dong some background checks of my digital footprint, revisiting my long forgotten accounts across various websites, updated my information by removing unnecessary things or adding something new. I've also created a few new accounts needed for my carreer progression (LinkedIn).</li>
                         </ul>
-                        <li><a href="about.html">About me</a></li>
-                    </ul>
-                </div>
-                <hr class="footerHR">
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <div class="contactDetails">
-                        <a href="mailto:peteriv9606@gmail.com"><i class="material-icons">email</i>peteriv9606@gmail.com</a>
-                        <a href="mailto:2013025@student.uwtsd.ac.uk"><i class="material-icons">email</i>2013025@student.uwtsd.ac.uk</a>
-                        <a href="tel:+447440409266"><i class="material-icons">phone</i>07440409266</a>
-                        <a href="https://wa.me/+447440409266/?text=Hi!"><i class="material-icons">message</i>(WhatsApp) 07440409266</a>
-                    </div>
-                </div>
-                <hr class="footerHR">
-                <div class="social">
-                    <h3>Social</h3>
-                    <div class="socialIcons">
-                        <a href="https://www.facebook.com/petar.ivanov.35325/" class="fab fa-facebook-f"> </a>
-                        <a href="https://www.instagram.com/p_iivanov/" class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/in/petar-ivanov-0a58441bb/" class="fab fa-linkedin-in"></a>
-                        <a href="https://github.com/peteriv9606" class="fab fa-github"></a>
-                    </div>
-                </div>
+                        <p>Going through the course summary I was thinking that all information gathered is important, not only because information is one of the most powerful tools worldwide, but because it teaches us to be, want and do “more”.</p>
+                        <br>
+                        <p>In particular:
+                        <ul class="inWeekList">
+                           <li>My “home” skills (this year - merged with my School Skills due to "COVID-19") have helped me throughout the course in finding information about my assessments, more details about my modules which I haven’t found before, even though it is there, and most importantly - I have made new friends by using social platforms I have never used before (MS Teams, WhatsApp).</li>
+                           <li>In work aspect, my skills have helped me along the way of finding a suitable job for me, and not falling into any scams.</li>
+                        </ul>
+                        </p>
+                        <br>
+                        <p>I was planning on making my very own digital E-Portfolio website for a long time now, because I know how important it is to be able to represent yourself. This module gave me the opportunity and the confidence to do this. As far as "Continuing my Digital Journey", I plan to keep updating this website throughout my studies, so I can showcase my work and achievements, because in the future, this website can help me find a possible career opportunity.</p>
+                        <p class="results">
+                           This week's "Compulsory Badge" Practice Quiz results are in:
+                        </p>
+                        <br>
+                        <table class="results">
+                           <tr style="background-color: whitesmoke;">
+                              <th>Try</th>
+                              <th>State</th>
+                              <th>Grade/45</th>
+                           </tr>
+                           <tr style="background-color: lightgreen;">
+                              <td>1</td>
+                              <td>Finished<br>
+                                 Submitted Monday, 2 Nov 2020, 18:24
+                              </td>
+                              <td>42.67</td>
+                           </tr>
+                        </table>
+                        <br>
+                        <p>As mentioned earlier <a style="cursor:pointer; color:#135db1;font-style: italic;" onclick="loadWeek('w4')">(Week 4)</a>, by scoring above 50% on both quizes, I get a <a href="achievements.html?cb" style="cursor:pointer; color:#135db1;font-style: italic;">"Compulsory Badge"</a>, which you can see in the <a href="achievements.html" style="cursor:pointer; color:#135db1;font-style: italic;">Achievements</a> section, alongside with my <a href="achievements.html?microsoft" style="cursor:pointer; color:#135db1;font-style: italic;">"Microsoft Digital Literacy Course"</a> certificates</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-    </section>
-    </body>
+         </div>
+      </section>
+      <section class="s2">
+         <div class="footer">
+            <div class="sitemap">
+               <h3>Sitemap</h3>
+               <ul class="footerList">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="assessment.html">Assessment</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAssessment')">+/-</button></li>
+                  <ul class="footerListSub" id="subListAssessment">
+                     <li><a href="assessment.html?week1">(Week 1) - My digital Life</a></li>
+                     <li><a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a></li>
+                     <li><a href="assessment.html?week3">(Week 3) - Making my mark online</a></li>
+                     <li><a href="assessment.html?week4">(Week 4) - Staying safe online</a></li>
+                     <li><a href="assessment.html?week5">(Week 5) - Critical Consumption</a></li>
+                     <li><a href="assessment.html?week6">(Week 6) - The right tool for the right job</a></li>
+                     <li><a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a></li>
+                     <li><a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a></li>
+                  </ul>
+                  <li><a href="achievements.html">Achievements</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAchievements')">+/-</button></li>
+                  <ul class="footerListSub" style="border: none;" id="subListAchievements">
+                     <li>Microsoft <button type="button" class="expandBtn" onclick="expandFooter('subListMicrosoft')">+/-</button></li>
+                     <ul class="footerListSub" id="subListMicrosoft">
+                        <li><a href="achievements.html?WWC">Work With Computers</a></li>
+                        <li><a href="achievements.html?AIO">Access information online</a></li>
+                        <li><a href="achievements.html?CO">Communicate online</a></li>
+                        <li><a href="achievements.html?PSARO">Participate safely and responsibly online</a></li>
+                        <li><a href="achievements.html?CDC">Create digital content</a></li>
+                        <li><a href="achievements.html?CAMCD">Collaborate and manage content digitally</a></li>
+                     </ul>
+                     <li>OpenLearn <button type="button" class="expandBtn" onclick="expandFooter('subListOpenLearn')">+/-</button></li>
+                     <ul class="footerListSub" id="subListOpenLearn">
+                        <li><a href="achievements.html?cb">Compulsory Badge</a></li>
+                        <li><a href="achievements.html?sop">Statement of Participation</a></li>
+                     </ul>
+                  </ul>
+                  <li><a href="about.html">About me</a></li>
+               </ul>
+            </div>
+            <hr class="footerHR">
+            <div class="contact">
+               <h3>Contact</h3>
+               <div class="contactDetails">
+                  <a href="mailto:peteriv9606@gmail.com"><i class="material-icons">email</i>peteriv9606@gmail.com</a>
+                  <a href="mailto:2013025@student.uwtsd.ac.uk"><i class="material-icons">email</i>2013025@student.uwtsd.ac.uk</a>
+                  <a href="tel:+447440409266"><i class="material-icons">phone</i>07440409266</a>
+                  <a href="https://wa.me/+447440409266/?text=Hi!"><i class="material-icons">message</i>(WhatsApp) 07440409266</a>
+               </div>
+            </div>
+            <hr class="footerHR">
+            <div class="social">
+               <h3>Social</h3>
+               <div class="socialIcons">
+                  <a href="https://www.facebook.com/petar.ivanov.35325/" class="fab fa-facebook-f"> </a>
+                  <a href="https://www.instagram.com/p_iivanov/" class="fab fa-instagram"></a>
+                  <a href="https://www.linkedin.com/in/petar-ivanov-0a58441bb/" class="fab fa-linkedin-in"></a>
+                  <a href="https://github.com/peteriv9606" class="fab fa-github"></a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
 </html>

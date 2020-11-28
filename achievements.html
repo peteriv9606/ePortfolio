@@ -1,212 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1,
-        maximum-scale=1, minimum-scale=1">
-        <title>E-Portfolio</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">        
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
-        
-        <script src="js_index_footer_loadPage.js"></script>
-        <script src="js_achievements.js"></script>
-       </head>
-    <body>
-        <section class="s1">
-            <div class="main-container">
-                <div class="main-window-wrapper">
-                    <div class="header-wrapper">
-                        <div class="current-window">
-                            <p class="fas fa-globe">
-                                <div class="window-icon-separator"></div>
-                                <p style="font-family: Segoe UI;">Welcome to my e-Portfolio</p>
-                            </p>
-                        </div>
-                        <div class="nav-icons">
-                            <div class="nav-mini">
-                                <div class="far fa-window-minimize"></div>
-                            </div>
-                            <div class="nav-maxi">
-                                <div class="far fa-square"></div>
-                            </div>
-                            <div class="nav-close">
-                                <div class="fa fa-close"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navigation">
-                        <button class="menubtn home"  type="button" onclick="loadPage('index.html')">Home</button>
-                        <button class="menubtn" type="button" onclick="loadPage('assessment.html')" style="border: 1px solid lightgray;">(LDE) Assessment</button>
-                        <div class="dropdown">
-                        <button class="menubtn" style="border: 1px solid lightgray;">
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="assessment.html?week1">(Week 1) - My digital Life</a>
-                            <a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a>
-                            <a href="assessment.html?week3">(Week 3) - Making my mark online</a>
-                            <a href="assessment.html?week4">(Week 4) - Staying safe online</a>
-                            <a href="assessment.html?week5">(Week 5) - Critical Consumption</a>
-                            <a href="assessment.html?week6">(Week 6) - The right tool for the right job</a>
-                            <a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a>
-                            <a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a>
-                        </div>
-                        </div>
-                        
-                        <button class="menubtn" type="button" onclick="loadPage('achievements.html')">Achievements</button>
-                        <button class="menubtn" type="button" onclick="loadPage('about.html')">About me</button>
-                        
-                    </div>
-                    <hr style="margin: 0px 0px 5px;">
-                    <div class="current-page">
-                        <div class="fas fa-cogs" >
-                            <a class="txt" onclick="loadPage('achievements.html')" style="font-family: Segoe UI;">> Achievements</a>
-                            <i id="navi"><a id="selected" onclick="hideSub()" style="cursor: pointer;"></a></i>
-                        </div>
-                    </div>
-
-                    <div class="window-content">
-                        <div class="left-side" id="left-side">
-                           <ul>
-                                <li> 
-                                    <button type="button" onclick="expand('microsoft')">
-                                        <img src="resources/images/microsoft.png" alt="https://www.stickpng.com/img/icons-logos-emojis/tech-companies/microsoft-logo" style="width: 100px;">
-                                    </button>
-                                                                       
-                                    <ul class="menuClass" id="microsoft">
-                                        <li><button type="button" onclick="loadAch('WWC')">1. Work With Computers</button></li>
-                                        <li><button type="button" onclick="loadAch('AIO')">2. Access information online</button></li>
-                                        <li><button type="button" onclick="loadAch('CO')">3. Communicate online</button></li>
-                                        <li><button type="button" onclick="loadAch('PSARO')">4. Participate safely and responsibly online</button></li>
-                                        <li><button type="button" onclick="loadAch('CDC')">5. Create digital content</button></li>
-                                        <li><button type="button" onclick="loadAch('CAMCD')">6. Collaborate and manage content digitally</button></li>
-                                    </ul>
-                                </li>
-                                <li> 
-                                    <button type="button" onclick="expand('openlearn')">
-                                        <img src="resources/images/openlearn.png" alt="https://cdn.freebiesupply.com/logos/large/2x/the-open-university-logo-png-transparent.png" style="width: 100px;">
-                                    </button>
-                                   
-                                    <ul class="menuClass" id="openlearn">
-                                        <li><button type="button" onclick="loadAch('cb')">Compulsory Badge</button></li>
-                                        <li><button type="button" onclick="loadAch('sop')">Statement of Participation</button></li>
-                                        
-                                    </ul>
-                                </li>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1,
+         maximum-scale=1, minimum-scale=1">
+      <title>E-Portfolio</title>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Font Awesome 4-->
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!--Font Awesome 5-->
+      <script src="js_index_footer_loadPage.js"></script>
+      <script src="js_achievements.js"></script>
+   </head>
+   <body>
+      <section class="s1">
+         <div class="main-container">
+            <div class="main-window-wrapper">
+               <div class="header-wrapper">
+                  <div class="current-window">
+                     <p class="fas fa-globe">
+                     <div class="window-icon-separator"></div>
+                     <p style="font-family: Segoe UI;">Welcome to my e-Portfolio</p>
+                     </p>
+                  </div>
+                  <div class="nav-icons">
+                     <div class="nav-mini">
+                        <div class="far fa-window-minimize"></div>
+                     </div>
+                     <div class="nav-maxi">
+                        <div class="far fa-square"></div>
+                     </div>
+                     <div class="nav-close">
+                        <div class="fa fa-close"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="navigation">
+                  <button class="menubtn home"  type="button" onclick="loadPage('index.html')">Home</button>
+                  <button class="menubtn" type="button" onclick="loadPage('assessment.html')" style="border: 1px solid lightgray;">(LDE) Assessment</button>
+                  <div class="dropdown">
+                     <button class="menubtn" style="border: 1px solid lightgray;">
+                     <i class="fa fa-caret-down"></i>
+                     </button>
+                     <div class="dropdown-content">
+                        <a href="assessment.html?week1">(Week 1) - My digital Life</a>
+                        <a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a>
+                        <a href="assessment.html?week3">(Week 3) - Making my mark online</a>
+                        <a href="assessment.html?week4">(Week 4) - Staying safe online</a>
+                        <a href="assessment.html?week5">(Week 5) - Critical Consumption</a>
+                        <a href="assessment.html?week6">(Week 6) - The right tool for the right job</a>
+                        <a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a>
+                        <a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a>
+                     </div>
+                  </div>
+                  <button class="menubtn" type="button" onclick="loadPage('achievements.html')">Achievements</button>
+                  <button class="menubtn" type="button" onclick="loadPage('about.html')">About me</button>
+               </div>
+               <hr style="margin: 0px 0px 5px;">
+               <div class="current-page">
+                  <div class="fas fa-cogs" >
+                     <a class="txt" onclick="loadPage('achievements.html')" style="font-family: Segoe UI;">> Achievements</a>
+                     <i id="navi"><a id="selected" onclick="hideSub()" style="cursor: pointer;"></a></i>
+                  </div>
+               </div>
+               <div class="window-content">
+                  <div class="left-side" id="left-side">
+                     <ul>
+                        <li>
+                           <button type="button" onclick="expand('microsoft')">
+                           <img src="resources/images/microsoft.png" alt="https://www.stickpng.com/img/icons-logos-emojis/tech-companies/microsoft-logo" style="width: 100px;">
+                           </button>
+                           <ul class="menuClass" id="microsoft">
+                              <li><button type="button" onclick="loadAch('WWC')">1. Work With Computers</button></li>
+                              <li><button type="button" onclick="loadAch('AIO')">2. Access information online</button></li>
+                              <li><button type="button" onclick="loadAch('CO')">3. Communicate online</button></li>
+                              <li><button type="button" onclick="loadAch('PSARO')">4. Participate safely and responsibly online</button></li>
+                              <li><button type="button" onclick="loadAch('CDC')">5. Create digital content</button></li>
+                              <li><button type="button" onclick="loadAch('CAMCD')">6. Collaborate and manage content digitally</button></li>
                            </ul>
-                        </div>
-                        <div class="right-side" id="right-side">
-                            <div class="instructions" id="instructions">
-                                Achievements and certificates achieved along my course study at University of Wales Trinity Saint David.<br>
-                                Please, use the buttons to view a certain achievement/certificate.
-                            </div>
-                            <div class="ach" id="WWC">
-                                <a href="resources/MSCert/1.WWC/1.WWC.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/1.WWC/1.WWC-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="AIO">
-                                <a href="resources/MSCert/2.AIO/2.AIO.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/2.AIO/2.AIO-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="CO">
-                                <a href="resources/MSCert/3.CO/3.CO.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/3.CO/3.CO-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="PSARO">
-                                <a href="resources/MSCert/4.PSARO/4.PSARO.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/4.PSARO/4.PSARO-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="CDC">
-                                <a href="resources/MSCert/5.CDC/5.CDC.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/5.CDC/5.CDC-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="CAMCD">
-                                <a href="resources/MSCert/6.CAMCD/6.CAMCD.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/MSCert/6.CAMCD/6.CAMCD-1.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="sop">
-                                <a href="resources/OpenLearnCert/SOP.pdf" type="application/pdf" target="_blank">
-                                    <img src="resources/OpenLearnCert/SOP1.png"><br>
-                                    <img src="resources/OpenLearnCert/SOP2.png">
-                                </a>
-                            </div>
-                            <div class="ach" id="cb">
-                                <a href="resources/OpenLearnCert/Badge.png" type="image/png" target="_blank">
-                                    <img src="resources/OpenLearnCert/Badge.png" style="width: 200px; display: flex; margin: 10% auto;">
-                                </a>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
+                        </li>
+                        <li>
+                           <button type="button" onclick="expand('openlearn')">
+                           <img src="resources/images/openlearn.png" alt="https://cdn.freebiesupply.com/logos/large/2x/the-open-university-logo-png-transparent.png" style="width: 100px;">
+                           </button>
+                           <ul class="menuClass" id="openlearn">
+                              <li><button type="button" onclick="loadAch('cb')">Compulsory Badge</button></li>
+                              <li><button type="button" onclick="loadAch('sop')">Statement of Participation</button></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="right-side" id="right-side">
+                     <div class="instructions" id="instructions">
+                        Achievements and certificates achieved along my course study at University of Wales Trinity Saint David.<br>
+                        Please, use the buttons to view a certain achievement/certificate.
+                     </div>
+                     <div class="ach" id="WWC">
+                        <a href="resources/MSCert/1.WWC/1.WWC.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/1.WWC/1.WWC-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="AIO">
+                        <a href="resources/MSCert/2.AIO/2.AIO.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/2.AIO/2.AIO-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="CO">
+                        <a href="resources/MSCert/3.CO/3.CO.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/3.CO/3.CO-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="PSARO">
+                        <a href="resources/MSCert/4.PSARO/4.PSARO.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/4.PSARO/4.PSARO-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="CDC">
+                        <a href="resources/MSCert/5.CDC/5.CDC.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/5.CDC/5.CDC-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="CAMCD">
+                        <a href="resources/MSCert/6.CAMCD/6.CAMCD.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/MSCert/6.CAMCD/6.CAMCD-1.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="sop">
+                        <a href="resources/OpenLearnCert/SOP.pdf" type="application/pdf" target="_blank">
+                        <img src="resources/OpenLearnCert/SOP1.png"><br>
+                        <img src="resources/OpenLearnCert/SOP2.png">
+                        </a>
+                     </div>
+                     <div class="ach" id="cb">
+                        <a href="resources/OpenLearnCert/Badge.png" type="image/png" target="_blank">
+                        <img src="resources/OpenLearnCert/Badge.png" style="width: 200px; display: flex; margin: 10% auto;">
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </section>
-        <section class="s2">
-            <div class="footer">
-                <div class="sitemap">
-                    <h3>Sitemap</h3>
-                    <ul class="footerList"> 
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="assessment.html">Assessment</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAssessment')">+/-</button></li>
-                        <ul class="footerListSub" id="subListAssessment">
-                            <li><a href="assessment.html?week1">(Week 1) - My digital Life</a></li>
-                            <li><a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a></li>
-                            <li><a href="assessment.html?week3">(Week 3) - Making my mark online</a></li>
-                            <li><a href="assessment.html?week4">(Week 4) - Staying safe online</a></li>
-                            <li><a href="assessment.html?week5">(Week 5) - Critical Consumption</a></li>
-                            <li><a href="assessment.html?week6">(Week 6) - The right tool for the right job</a></li>
-                            <li><a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a></li>
-                            <li><a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a></li>
-                        </ul>
-                    <li><a href="achievements.html">Achievements</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAchievements')">+/-</button></li>
-                        <ul class="footerListSub" style="border: none;" id="subListAchievements">
-                            <li>Microsoft <button type="button" class="expandBtn" onclick="expandFooter('subListMicrosoft')">+/-</button></li>
-                            <ul class="footerListSub" id="subListMicrosoft">
-                                <li><a href="achievements.html?WWC">Work With Computers</a></li>
-                                <li><a href="achievements.html?AIO">Access information online</a></li>
-                                <li><a href="achievements.html?CO">Communicate online</a></li>
-                                <li><a href="achievements.html?PSARO">Participate safely and responsibly online</a></li>
-                                <li><a href="achievements.html?CDC">Create digital content</a></li>
-                                <li><a href="achievements.html?CAMCD">Collaborate and manage content digitally</a></li>
-                            </ul>
-                            <li>OpenLearn <button type="button" class="expandBtn" onclick="expandFooter('subListOpenLearn')">+/-</button></li>
-                            <ul class="footerListSub" id="subListOpenLearn">
-                                <li><a href="achievements.html?cb">Compulsory Badge</a></li>
-                                <li><a href="achievements.html?sop">Statement of Participation</a></li>
-                            </ul>
-                        </ul>
-                        <li><a href="about.html">About me</a></li>
-                    </ul>
-                </div>
-                <hr class="footerHR">
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <div class="contactDetails">
-                        <a href="mailto:peteriv9606@gmail.com"><i class="material-icons">email</i>peteriv9606@gmail.com</a>
-                        <a href="mailto:2013025@student.uwtsd.ac.uk"><i class="material-icons">email</i>2013025@student.uwtsd.ac.uk</a>
-                        <a href="tel:+447440409266"><i class="material-icons">phone</i>07440409266</a>
-                        <a href="https://wa.me/+447440409266/?text=Hi!"><i class="material-icons">message</i>(WhatsApp) 07440409266</a>
-                    </div>
-                </div>
-                <hr class="footerHR">
-                <div class="social">
-                    <h3>Social</h3>
-                    <div class="socialIcons">
-                        <a href="https://www.facebook.com/petar.ivanov.35325/" class="fab fa-facebook-f"> </a>
-                        <a href="https://www.instagram.com/p_iivanov/" class="fab fa-instagram"></a>
-                        <a href="https://www.linkedin.com/in/petar-ivanov-0a58441bb/" class="fab fa-linkedin-in"></a>
-                        <a href="https://github.com/peteriv9606" class="fab fa-github"></a>
-                    </div>
-                </div>
+         </div>
+      </section>
+      <section class="s2">
+         <div class="footer">
+            <div class="sitemap">
+               <h3>Sitemap</h3>
+               <ul class="footerList">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="assessment.html">Assessment</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAssessment')">+/-</button></li>
+                  <ul class="footerListSub" id="subListAssessment">
+                     <li><a href="assessment.html?week1">(Week 1) - My digital Life</a></li>
+                     <li><a href="assessment.html?week2">(Week 2) - Getting up and running (my digital environment)</a></li>
+                     <li><a href="assessment.html?week3">(Week 3) - Making my mark online</a></li>
+                     <li><a href="assessment.html?week4">(Week 4) - Staying safe online</a></li>
+                     <li><a href="assessment.html?week5">(Week 5) - Critical Consumption</a></li>
+                     <li><a href="assessment.html?week6">(Week 6) - The right tool for the right job</a></li>
+                     <li><a href="assessment.html?week7">(Week 7) - Being Digital and making it work for me</a></li>
+                     <li><a href="assessment.html?week8">(Week 8) - Continuing my digital journey</a></li>
+                  </ul>
+                  <li><a href="achievements.html">Achievements</a> <button type="button" class="expandBtn" onclick="expandFooter('subListAchievements')">+/-</button></li>
+                  <ul class="footerListSub" style="border: none;" id="subListAchievements">
+                     <li>Microsoft <button type="button" class="expandBtn" onclick="expandFooter('subListMicrosoft')">+/-</button></li>
+                     <ul class="footerListSub" id="subListMicrosoft">
+                        <li><a href="achievements.html?WWC">Work With Computers</a></li>
+                        <li><a href="achievements.html?AIO">Access information online</a></li>
+                        <li><a href="achievements.html?CO">Communicate online</a></li>
+                        <li><a href="achievements.html?PSARO">Participate safely and responsibly online</a></li>
+                        <li><a href="achievements.html?CDC">Create digital content</a></li>
+                        <li><a href="achievements.html?CAMCD">Collaborate and manage content digitally</a></li>
+                     </ul>
+                     <li>OpenLearn <button type="button" class="expandBtn" onclick="expandFooter('subListOpenLearn')">+/-</button></li>
+                     <ul class="footerListSub" id="subListOpenLearn">
+                        <li><a href="achievements.html?cb">Compulsory Badge</a></li>
+                        <li><a href="achievements.html?sop">Statement of Participation</a></li>
+                     </ul>
+                  </ul>
+                  <li><a href="about.html">About me</a></li>
+               </ul>
             </div>
-    </section>
-    </body>
+            <hr class="footerHR">
+            <div class="contact">
+               <h3>Contact</h3>
+               <div class="contactDetails">
+                  <a href="mailto:peteriv9606@gmail.com"><i class="material-icons">email</i>peteriv9606@gmail.com</a>
+                  <a href="mailto:2013025@student.uwtsd.ac.uk"><i class="material-icons">email</i>2013025@student.uwtsd.ac.uk</a>
+                  <a href="tel:+447440409266"><i class="material-icons">phone</i>07440409266</a>
+                  <a href="https://wa.me/+447440409266/?text=Hi!"><i class="material-icons">message</i>(WhatsApp) 07440409266</a>
+               </div>
+            </div>
+            <hr class="footerHR">
+            <div class="social">
+               <h3>Social</h3>
+               <div class="socialIcons">
+                  <a href="https://www.facebook.com/petar.ivanov.35325/" class="fab fa-facebook-f"> </a>
+                  <a href="https://www.instagram.com/p_iivanov/" class="fab fa-instagram"></a>
+                  <a href="https://www.linkedin.com/in/petar-ivanov-0a58441bb/" class="fab fa-linkedin-in"></a>
+                  <a href="https://github.com/peteriv9606" class="fab fa-github"></a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </body>
 </html>
