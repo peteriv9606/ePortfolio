@@ -68,8 +68,8 @@ li>button {
 }
 
 .main-container {
-	width: 1200px;
-	margin: 0 auto;
+	width: fit-content;
+	margin: 0 10%;
 	transition: 0.2s;
 }
 
@@ -230,7 +230,7 @@ li>button {
 	display: flex;
 	min-height: 500px;
 	margin: 10px;
-	width: auto;
+	width: fit-content;
 }
 
 .left-side {
@@ -559,7 +559,7 @@ hr.footerHR {
 
 @media screen and (max-width: 1200px) {
 	.main-container {
-		width: auto;
+		width: fit-content;
 		margin: 10% 5%;
 		transition: 0.2s;
 	}
@@ -569,7 +569,7 @@ hr.footerHR {
 	.window-content {
 		display: block;
 		margin: 10px;
-		width: auto;
+		width: fit-content;
 	}
 	.left-side {
 		display: block;
