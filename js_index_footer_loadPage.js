@@ -5,7 +5,7 @@ function loadPage(page) {
     window.location.href = page;
 }
 
-function expandFooter(thisID) {
+ function expandFooter(thisID) {
     //check if existing
     if (arr.length == 0) {
         first = true;
