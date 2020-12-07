@@ -303,7 +303,7 @@ tr>td {
 .tbl-with-img>img {
 	width: 140px;
 	height: 165px;
-	border-radius: 25%;
+	border-radius: 10%;
 }
 
 .instructions {
