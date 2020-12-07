@@ -68,9 +68,9 @@ li>button {
 }
 
 .main-container {
-	width: fit-content;
-	margin: 0 10%;
-	transition: 0.2s;
+    width: 97%;
+    margin: 0% auto;
+    transition: 0.2s;
 }
 
 .main-window-wrapper {
@@ -79,7 +79,7 @@ li>button {
 	-webkit-box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
 	-moz-box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
 	box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
-	margin: 10% 5%;
+	margin: 2% 0%;
 	transition: 0.2s;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -228,9 +228,9 @@ li>button {
 
 .window-content {
 	display: flex;
-	min-height: 500px;
-	margin: 10px;
-	width: fit-content;
+    min-height: 500px;
+    margin: auto;
+    width: fit-content;
 }
 
 .left-side {

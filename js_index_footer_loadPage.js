@@ -1,8 +1,22 @@
 var arr = [];
 var first = true;
+$(document).ready(function(){
+    var link = window.location.href;
+    if(link.includes("about.html") || link.includes("index.html")){
+        //^^^^ Tuka ne raboti
+         $(".left-side").css({"width":"0%"});
+         $(".right-side").css({"width":"auto","margin":"0% 5%"});
+        
+     }
+});
+
+
+
 
 function loadPage(page) {
     window.location.href = page;
+
+    
 }
 
  function expandFooter(thisID) {
@@ -35,3 +49,4 @@ function loadPage(page) {
         arr[i] = thisID;
     }
 }
+
