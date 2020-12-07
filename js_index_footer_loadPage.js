@@ -3,11 +3,10 @@ var first = true;
 $(document).ready(function(){
     var link = window.location.href;
     if(link.includes("about.html") || link.includes("index.html")){
-        //^^^^ Tuka ne raboti
-         $(".left-side").css({"width":"0%"});
-         $(".right-side").css({"width":"auto","margin":"0% 5%"});
-        
+        $(".left-side").css({"width":"0%"});
+        $(".right-side").css({"width":"100%","margin":"0% 10%"});
      }
+     $(".s1").animate({"opacity":"1"},"slow");
 });
 
 
