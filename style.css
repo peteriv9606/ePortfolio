@@ -458,6 +458,7 @@ ul.footerList {
 	margin-left: 15%;
 	font-style: italic;
 	font-size: 14px;
+	color: var(--windowColor)
 }
 
 ul.footerList a:hover,
@@ -476,7 +477,7 @@ ul.footerListSub {
 
 ul.footerListSub>li a,
 ul.footerList>li>a {
-	color: black;
+	color: var(--windowColor)
 }
 
 ul.footerListSub>li>a:hover,
@@ -486,6 +487,7 @@ ul.footerList>li>a :hover {
 
 button.expandBtn {
 	background-color: transparent;
+	color: var(--windowColor);
 	padding: 0px;
 	margin: 0px;
 	width: auto;
@@ -515,7 +517,7 @@ div.contactDetails {
 }
 
 div.contactDetails>a {
-	color: var(--mainText);
+	color: var(--windowColor);
 	display: block;
 	margin: 2% 4%;
 	font-weight: 100;
