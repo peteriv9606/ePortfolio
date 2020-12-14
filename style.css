@@ -11,12 +11,14 @@
 	--mainText: black;
 	--secondaryText: #4b5156;
 	--windowsfont: "Segoe UI";
+	--listStyleTick: url("resources/images/listStyleTick.png");
 }
 
 html,
 body {
 	padding: 0;
 	margin: 0;
+	background-color: var(--mainColor);
 }
 
 h3 {
@@ -70,35 +72,27 @@ li>button:active{
 	color:var(--secondaryText);
 }
 
-.s1 {
+.main {
 	opacity: 0;
 	background-color: var(--mainColor);
 	border-bottom: 1px solid var(--borderColor);
 	overflow: auto;
 }
 
-.s2 {
-	background-color: #464646;
-	border-bottom: 1px solid var(--borderColor);
-	overflow: auto;
-}
 
-.main-container {
-    width: 97%;
-    margin: 0% auto;
-    transition: 0.2s;
-}
+
 
 .main-window-wrapper {
-	background-color: var(--windowColor);
-	border: 1px solid var(--borderColor);
-	-webkit-box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
-	-moz-box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
-	box-shadow: 20px 20px 20px 15px rgba(0, 0, 0, 0.14);
-	margin: 2% 0%;
-	transition: 0.2s;
+	width: auto;
+    margin: 2% 10%;
+    background-color: var(--windowColor);
+    border: 1px solid var(--borderColor);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.14);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.14);
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
+	transition: 0.2s;
 }
 
 .header-wrapper {
@@ -306,6 +300,22 @@ tr>td {
 	border-radius: 10%;
 }
 
+div.list-split{
+	display: flex;
+    place-content: center;
+    padding: 0 10%;
+}
+
+div.list-split>ul{
+	list-style: disc;
+    margin: 0 5%;
+    font-size: 18px;
+}
+div.list-split>ul>li{
+	list-style-type: '✅';
+	padding-inline-start: 5px ;
+}
+
 .instructions {
 	display: flex;
 	height: 100%;
@@ -434,7 +444,10 @@ ul.menuClass {
 	display: none;
 }
 
-div.footer {
+footer {
+	background-color: #464646;
+	border-bottom: 1px solid var(--borderColor);
+	overflow: auto;
 	display: flex;
 	height: fit-content;
 	padding: 1%;
@@ -576,11 +589,7 @@ hr.footerHR {
 }
 
 @media screen and (max-width: 1200px) {
-	.main-container {
-		width: fit-content;
-		margin: 10% 5%;
-		transition: 0.2s;
-	}
+	
 }
 
 @media screen and (max-width: 1000px) {
@@ -603,6 +612,7 @@ hr.footerHR {
 	ul.inWeekList {
 		margin: 0% 10%;
 	}
+	
 	table.results tbody>tr>th {
 		font-size: 16px;
 	}
@@ -642,7 +652,7 @@ hr.footerHR {
 }
 
 @media screen and (max-width: 850px) {
-	div.footer {
+	footer {
 		display: block;
 	}
 	div.sitemap,
@@ -680,6 +690,18 @@ hr.footerHR {
 }
 
 @media screen and (max-width: 750px) {
+	main, .main-window-wrapper, div.right-side{
+		width:100%;
+		margin: 0%;
+	}
+	.window-content {
+		display: block;
+		margin: 0px;
+		width: auto;
+	}
+	table{
+		margin: 0% 10%;
+	}
 	.tbl-with-img {
 		display: block;
 		text-align: -webkit-center;
@@ -689,14 +711,28 @@ hr.footerHR {
 	}
 	tr>td {
 		min-width: 100px;
-		font-size: 14px;
+		font-size: 12px;
 		flex-wrap: wrap;
+		text-align: justify;
 	}
 	.menubtn {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.current-page {
-		font-size: 14px;
+		font-size: 12px;
+	}
+	div.list-split {
+		display: block;
+		place-content: center;
+		margin: 0px 20%;
+	}
+	div.list-split>ul {
+		list-style: disc;
+		margin: 0 2%;
+		font-size: 12px;
+	}
+	div.list-split>ul>li::marker{
+		font-size: inherit;
 	}
 	ul {
 		display: block;
@@ -714,7 +750,7 @@ hr.footerHR {
 	.instructions {
 		display: flex;
 		background-color: var(--windowColor);
-		font-size: 28px;
+		font-size: 24px;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
@@ -736,7 +772,7 @@ hr.footerHR {
 		margin: 0% 10%;
 	}
 	table.results tbody>tr>th {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	table.results tbody>tr>td {
 		min-width: 0px;
@@ -784,9 +820,6 @@ hr.footerHR {
 		display: flex;
 		float: left;
 		font-size: 12px;
-	}
-	.main-window-wrapper {
-		margin: 10% 0%;
 	}
 	div.contactDetails>a {
 		margin: 1% 12%;

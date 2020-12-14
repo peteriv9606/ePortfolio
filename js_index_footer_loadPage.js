@@ -3,7 +3,7 @@ $(document).ready(function(){
     
     if(link.includes("about.html") || link.includes("index.html")){
         $(".left-side").css({"width":"0%"});
-        $(".right-side").css({"width":"100%","margin":"0% 10%"});
+        $(".right-side").css({"width":"100%","margin":"0%"});
     }
     $(".s1").animate({"opacity":"1"},"slow");
      
