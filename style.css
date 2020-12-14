@@ -30,6 +30,11 @@ h3 {
 	text-align: center;
 }
 
+.fa, .fas {
+    font-weight: 600;
+}
+
+
 a,
 p,
 li,
@@ -171,6 +176,7 @@ li>button:active{
 	color: black;
 	cursor: pointer;
 	padding: 5px;
+	font-weight: 600;
 }
 
 .current-page a {
