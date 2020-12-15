@@ -59,7 +59,7 @@ li {
 
 li>button {
 	width: -webkit-fill-available;
-    padding: 10px 5px;
+    padding: 5px;
     background-color: transparent;
     cursor: pointer;
     border: 1px solid var(--borderColor);
@@ -77,11 +77,11 @@ li>button:active{
 	color:var(--secondaryText);
 }
 
-.main {
+main {
 	opacity: 0;
 	background-color: var(--mainColor);
 	border-bottom: 1px solid var(--borderColor);
-	overflow: auto;
+	
 }
 
 
@@ -518,7 +518,7 @@ div.contactDetails {
 	display: flex;
 	font-size: 14px;
 	margin: 1% 0%;
-	justify-content: center;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 
@@ -699,8 +699,8 @@ hr.footerHR {
 
 @media screen and (max-width: 750px) {
 	main, .main-window-wrapper, div.right-side{
-		width:100%;
-		margin: 0%;
+		width: auto;
+   		margin: 0 2%;
 	}
 	.window-content {
 		display: block;
@@ -750,7 +750,8 @@ hr.footerHR {
 		padding: 0px;
 	}
 	li>button {
-		width: -webkit-fill-available;
+	    width: -webkit-fill-available;
+		margin: 0 5%;
 		padding: 5px;
 		min-width: 5px;
 		font-size: 12px;
