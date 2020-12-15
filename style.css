@@ -287,9 +287,8 @@ table {
 }
 
 tr>td {
-	min-width: 150px;
-	font-size: 18px;
-	font-family: var(--windowsfont);
+	font-size: 16px;
+    font-family: var(--windowsfont);
 }
 
 .tbl-with-img {
@@ -315,11 +314,31 @@ div.list-split{
 div.list-split>ul{
 	list-style: disc;
     margin: 0 5%;
-    font-size: 18px;
+    font-size: 16px;
 }
 div.list-split>ul>li{
 	list-style-type: '✅';
 	padding-inline-start: 5px ;
+}
+
+table.exp{
+	border-spacing: 0;
+}
+table.exp th{
+    width: 30%;
+}
+table.exp tr{
+	border-bottom:10px solid var(--borderColor);
+}
+table.exp td{
+	vertical-align: top; 
+	text-align: justify;
+	border-top: 1px solid var(--borderColor); 
+}
+table.exp td>ul{
+	list-style-type: '✅'; 
+	border-left: 1px solid var(--borderColor); 
+	padding-left: 30px;
 }
 
 .instructions {
@@ -411,7 +430,6 @@ div.instructions p {
 table.weekActivity {
 	margin: 1%;
 	padding: 1%;
-	min-width: 100px;
 	border: 1px solid var(--borderColor);
 	overflow: auto;
 }
@@ -718,7 +736,7 @@ hr.footerHR {
 		min-width: 300px;
 	}
 	tr>td {
-		min-width: 100px;
+		min-width: 0px;
 		font-size: 12px;
 		flex-wrap: wrap;
 		text-align: justify;
